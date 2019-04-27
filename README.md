@@ -5,7 +5,7 @@ This the report of bugs that found by CrashTuner. We will give the detail of how
 ## Found bugs
 |Bug Id  |Status |patch|Detail|Meta-info|
 | :------:  | :------: | :------: | :------: | :------: |
-| YARN-8649 | Fixed | YARN-8649 | YARN-8649 | YARN-8649 |
+| [YARN-8649](https://issues.apache.org/jira/browse/YARN-8649) | Fixed | YARN-8649 | YARN-8649 | YARN-8649 |
 | YARN-8650 | Fixed | YARN-8649 | YARN-8649 | YARN-8649 |
 | YARN-9164 | Fixed | YARN-8649 | YARN-8649 | YARN-8649 |
 | YARN-9165 | Fixed | YARN-8649 | YARN-8649 | YARN-8649 |
