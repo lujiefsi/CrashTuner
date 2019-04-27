@@ -21,5 +21,5 @@ This the report of bugs that found by CrashTuner. We will give the detail of how
 | [HBASE-22023](https://issues.apache.org/jira/browse/HBASE-22023) | Unresolved | YARN-8649 | YARN-8649 | YARN-8649 |
 | [HBASE-22041](https://issues.apache.org/jira/browse/HBASE-22041)  | Unresolved | YARN-8649 | YARN-8649 | YARN-8649 |
 | [HBASE-22050](https://issues.apache.org/jira/browse/HBASE-22050) | Unresolved | YARN-8649 | YARN-8649 | YARN-8649 |
-| [HDFS-14621](https://issues.apache.org/jira/browse/HDFS-14621) | Fixed | YARN-8649 | YARN-8649 | YARN-8649 |
+| [HDFS-14216](https://issues.apache.org/jira/browse/HDFS-14216) | Fixed | YARN-8649 | YARN-8649 | YARN-8649 |
 | [HDFS-14372](https://issues.apache.org/jira/browse/HDFS-14372) | Unresolved | YARN-8649 | YARN-8649 | YARN-8649 |
