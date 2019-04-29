@@ -1,7 +1,7 @@
 # CrashTuner
 
 ## What can you get from this project?
-This the report of bugs that found by CrashTuner. We will give the detail of how to trgigger ecah bugs. Besdides, we also give a simple version of CrashTuner in docker to show how CrashTuner find these bugs.
+This the report of bugs that found by CrashTuner. We will give the detail of how to trigger each bugs. Besides, we also give a simple version of CrashTuner in docker to show how CrashTuner find these bugs.
 ## Found bugs
 |Bug Id  |Status |patch|Detail|Meta-info|
 | :------:  | :------: | :------: | :------: | :------: |
