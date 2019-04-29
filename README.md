@@ -3,7 +3,10 @@
 ## What can you get from this project?
 This the report of bugs that found by CrashTuner. We will give the detail of how to trigger each bugs. Besides, we also give a simple version of CrashTuner in docker to show how CrashTuner find these bugs.
 ## Found bugs
-|Bug Id  |Status |patch|Detail|Meta-info|
+
+In the below table, we give all new bugs found by CrashTuner. You can click the Bug Id to see the bug report and Patch to see the fixing, and Detail to see how to trigger the bug. In the detail, we may show some code snippet, you can download the whole buggy project code(which can be found in bug report) for further understanding.
+
+|Bug Id  |Status |Patch|Detail|Meta-info|
 | :------:  | :------: | :------: | :------: | :------: |
 | [YARN-8649](https://issues.apache.org/jira/browse/YARN-8649) | Fixed | [YARN-8649_5.patch](https://issues.apache.org/jira/secure/attachment/12936754/YARN-8649_5.patch) | [YARN-8649](https://github.com/lujiefsi/CrashTuner/blob/master/detail/YARN-8649.md) | ApplicationId |
 | [YARN-8650](https://issues.apache.org/jira/browse/YARN-8650) | Fixed | [YARN-8331.002.patch](https://issues.apache.org/jira/secure/attachment/12934881/YARN-8331.002.patch) | YARN-8649 | ContainerId |
