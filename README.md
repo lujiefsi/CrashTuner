@@ -10,7 +10,7 @@ In the below table, we give all new bugs found by CrashTuner. You can click the 
 | :------:  | :------: | :------: | :------: | :------: |
 | [YARN-8649](https://issues.apache.org/jira/browse/YARN-8649) | Fixed | [YARN-8649_5.patch](https://issues.apache.org/jira/secure/attachment/12936754/YARN-8649_5.patch) | [YARN-8649](https://github.com/lujiefsi/CrashTuner/blob/master/detail/YARN-8649.md) | ApplicationId |
 | [YARN-8650](https://issues.apache.org/jira/browse/YARN-8650) | Fixed | [YARN-8331.002.patch](https://issues.apache.org/jira/secure/attachment/12934881/YARN-8331.002.patch) | YARN-8649 | ContainerId |
-| [YARN-9164](https://issues.apache.org/jira/browse/YARN-9164) | Fixed | [YARN-9164-2.patch](https://issues.apache.org/jira/secure/attachment/12953556/YARN-9164-2.patch) | YARN-8649 | NodeId |
+| [YARN-9164](https://issues.apache.org/jira/browse/YARN-9164) | Fixed | [YARN-9164-2.patch](https://issues.apache.org/jira/secure/attachment/12953556/YARN-9164-2.patch) | [YARN-9164](https://github.com/lujiefsi/CrashTuner/blob/master/detail/YARN-9164.md) | NodeId |
 | [YARN-9165](https://issues.apache.org/jira/browse/YARN-9165) | Fixed | [YARN-9164-2.patch](https://issues.apache.org/jira/secure/attachment/12953556/YARN-9164-2.patch) | YARN-8649 | ContainerId |
 | [YARN-9193](https://issues.apache.org/jira/browse/YARN-9193) | Fixed | [YARN-9194_6.patch](https://issues.apache.org/jira/secure/attachment/12955092/YARN-9194_6.patch) | YARN-8649 | YARN-8649 |
 | [YARN-9194](https://issues.apache.org/jira/browse/YARN-9194) | Fixed | [YARN-9194_6.patch](https://issues.apache.org/jira/secure/attachment/12955092/YARN-9194_6.patch)  | YARN-8649 | YARN-8649 |
