@@ -16,7 +16,7 @@ In the below table, we give all new bugs found by CrashTuner. You can click the 
 | [YARN-9194](https://issues.apache.org/jira/browse/YARN-9194) | Fixed | [YARN-9194_6.patch](https://issues.apache.org/jira/secure/attachment/12955092/YARN-9194_6.patch)  | YARN-8649 | YARN-8649 |
 | [YARN-9201](https://issues.apache.org/jira/browse/YARN-9201) | Fixed | [YARN-9194_6.patch](https://issues.apache.org/jira/secure/attachment/12955092/YARN-9194_6.patch)  | YARN-8649 | YARN-8649 |
 | [MR-7178](https://issues.apache.org/jira/browse/MAPREDUCE-7178) | Unresolved |[MR-7178_1.patch]( https://issues.apache.org/jira/secure/attachment/12956427/MR-7178_1.patch) | YARN-8649 | TaskAttemptId |
-| [YARN-9238](https://issues.apache.org/jira/browse/YARN-9238) | Fixed | [YARN-9238_3.patch](https://issues.apache.org/jira/secure/attachment/12959002/YARN-9238_3.patch) | YARN-8649 | YARN-8649 |
+| [YARN-9238](https://issues.apache.org/jira/browse/YARN-9238) | Fixed | [YARN-9238_3.patch](https://issues.apache.org/jira/secure/attachment/12959002/YARN-9238_3.patch) | [YARN-9238](https://github.com/lujiefsi/CrashTuner/blob/master/detail/YARN-9238.md) | YARN-8649 |
 | [YARN-9248](https://issues.apache.org/jira/browse/YARN-9248) | Fixed | [YARN-9248_5.patch](https://issues.apache.org/jira/secure/attachment/12956913/YARN-9248_5.patch) | YARN-8649 | YARN-8649 |
 | [HBASE-21740](https://issues.apache.org/jira/browse/HBASE-21740) | Fixed |[HBASE-21740.patch](https://issues.apache.org/jira/secure/attachment/12959012/0001-fix-HBASE-21740.patch)| YARN-8649 | YARN-8649 |
 | [HBASE-22017](https://issues.apache.org/jira/browse/HBASE-22017) | Fixed | [pull-158](https://github.com/apache/hbase/pull/158) | YARN-8649 | YARN-8649 |
