@@ -26,7 +26,14 @@ In the below table, we give all new bugs found by CrashTuner. You can click the 
 | [HBASE-22023](https://issues.apache.org/jira/browse/HBASE-22023) | Unresolved |[master.patch](https://issues.apache.org/jira/secure/attachment/12966775/0001-fix-HBASE-22023-on-master.patch) | [HBASE-22023](https://github.com/lujiefsi/CrashTuner/blob/master/detail/HBASE-22023.md)  | MetricsRegionServer |
 | [YARN-8650](https://issues.apache.org/jira/browse/YARN-8650) | Fixed | [YARN-8331.002.patch](https://issues.apache.org/jira/secure/attachment/12934881/YARN-8331.002.patch) | [YARN-8650](https://github.com/lujiefsi/CrashTuner/blob/master/detail/YARN-8650.md) | ContainerId |
 
-## `Others`
+## Reproduce
+
+There are two ways to reproduce the bugs found by CrashTuner.
+
+1. We have write some unit tests in patches, you can change the source code to re-test them.
+2. We have provide a docker image to reproduce all new bugs, see [here](TODO) .
+
+## Others
 
 ### How to determine the bug Priority?
 
