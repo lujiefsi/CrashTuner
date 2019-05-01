@@ -31,7 +31,7 @@ In the below table, we give all new bugs found by CrashTuner. You can click the 
 There are two ways to reproduce the bugs found by CrashTuner.
 
 1. We have write some unit tests in patches, you can change the source code to re-test them.
-2. We have provide a docker image to reproduce all new bugs, see [here](TODO) .
+2. We have provide a docker image to reproduce all new bugs, see  [document](TODO)  or [video](TODO) .
 
 ## Others
 
