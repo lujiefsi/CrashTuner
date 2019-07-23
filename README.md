@@ -4,7 +4,7 @@
 This the report of bugs that found by CrashTuner. We will give the detail of how to trigger each bug. Besides, we also give a simple version of CrashTuner in docker to show how CrashTuner find these bugs.
 ## New bugs
 
-In the below table, we give all new bugs found by CrashTuner. You can click the Bug Id to see the bug report and Patch to see the fixing, and Detail to see how to trigger the bug. In the detail, we only show a small code snippet, you can download the whole buggy project code(which can be found in bug report) for further understanding.
+In the below table, we give all new bugs((all our studied bugs and their detail exists in [old bugs](https://github.com/lujiefsi/CrashTuner/tree/master/detail/old bugs)) found by CrashTuner. You can click the Bug Id to see the bug report and Patch to see the fixing, and Detail to see how to trigger the bug. In the detail, we only show a small code snippet, you can download the whole buggy project code(which can be found in bug report) for further understanding.
 
 |Bug Id  |Priority |Status |Patch|Detail|Meta-info|
 | :------:  | :------: | :------: | :------: | :------: | :------: |
@@ -38,7 +38,7 @@ There are two ways to reproduce the bugs found by CrashTuner.
 
 ## Portability
 
-Currently, we only apply CrashTuner on the distributed system that written in java(all our studied bugs exists in [old bugs](https://github.com/lujiefsi/CrashTuner/tree/master/detail/old bugs), but we also investigate the distributed system written by other language, like [K8s](https://kubernetes.io/) written in **Golang**. We find that CrashTuner can also help it improve the reliability. our studied bugs in  k8s are in [k8sbugs](https://github.com/lujiefsi/CrashTuner/tree/master/detail/old bugs/k8s)(sorry about the document is written in Chinese,  English reader can click the URL in each document goto the corresponding issue) and we are implementing another version CrashTuner to detect them.
+Currently, we only apply CrashTuner on the distributed system that written in java, but we also investigate the distributed system written by other language, like [K8s](https://kubernetes.io/) written in **Golang**. We find that CrashTuner can also help it improve the reliability. our studied bugs in  k8s are in [k8sbugs](https://github.com/lujiefsi/CrashTuner/tree/master/detail/old bugs/k8s)(sorry about the document is written in Chinese,  English reader can click the URL in each document goto the corresponding issue) and we are implementing another version CrashTuner to detect them.
 
 We believe that CrashTuner has good portability and we are doing large work on different distributed systems.
 
