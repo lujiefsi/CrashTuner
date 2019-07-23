@@ -38,19 +38,9 @@ There are two ways to reproduce the bugs found by CrashTuner.
 
 ## Portability
 
-Currently, we only apply CrashTuner on the distributed system that written in java, but we also investigate the distributed system written by other language, like [K8s](https://kubernetes.io/) written in **Golang**. We find that CrashTuner can also help it improve the reliability. Below is our studied bugs in  k8s and we are implementing another version CrashTuner to detect them:
+Currently, we only apply CrashTuner on the distributed system that written in java, but we also investigate the distributed system written by other language, like [K8s](https://kubernetes.io/) written in **Golang**. We find that CrashTuner can also help it improve the reliability. our studied bugs in  k8s are in [k8sbugs](https://github.com/lujiefsi/CrashTuner/tree/master/detail/k8s)(sorry about the document is written in Chinese,  English read can click the URL in each document goto the corresponding issue) and we are implementing another version CrashTuner to detect them:
 
   
-
-| #78782 |      |      |      |
-| ------ | ---- | ---- | ---- |
-|        |      |      |      |
-|        |      |      |      |
-|        |      |      |      |
-|        |      |      |      |
-|        |      |      |      |
-
-
 
 ## Others
 
