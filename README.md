@@ -1,10 +1,10 @@
 # CrashTuner
 
 ## What can you get from this project?
-This the report of bugs that found by CrashTuner. We will give the detail of how to trigger each bugs. Besides, we also give a simple version of CrashTuner in docker to show how CrashTuner find these bugs.
+This the report of bugs that found by CrashTuner. We will give the detail of how to trigger each bug. Besides, we also give a simple version of CrashTuner in docker to show how CrashTuner find these bugs.
 ## Found bugs
 
-In the below table, we give all new bugs found by CrashTuner. You can click the Bug Id to see the bug report and Patch to see the fixing, and Detail to see how to trigger the bug. In the detail, we may show some code snippet, you can download the whole buggy project code(which can be found in bug report) for further understanding.
+In the below table, we give all new bugs found by CrashTuner. You can click the Bug Id to see the bug report and Patch to see the fixing, and Detail to see how to trigger the bug. In the detail, we only show a small code snippet, you can download the whole buggy project code(which can be found in bug report) for further understanding.
 
 |Bug Id  |Priority |Status |Patch|Detail|Meta-info|
 | :------:  | :------: | :------: | :------: | :------: | :------: |
@@ -25,23 +25,44 @@ In the below table, we give all new bugs found by CrashTuner. You can click the 
 | [HBASE-21740](https://issues.apache.org/jira/browse/HBASE-21740) | Major | Fixed |[HBASE-21740.patch](https://issues.apache.org/jira/secure/attachment/12959012/0001-fix-HBASE-21740.patch)| [HBASE-21740](https://github.com/lujiefsi/CrashTuner/blob/master/detail/HBASE-21740.md)  | MetricsRegionServer |
 | [HBASE-22023](https://issues.apache.org/jira/browse/HBASE-22023) | Trivial | Unresolved |[master.patch](https://issues.apache.org/jira/secure/attachment/12966775/0001-fix-HBASE-22023-on-master.patch) | [HBASE-22023](https://github.com/lujiefsi/CrashTuner/blob/master/detail/HBASE-22023.md)  | MetricsRegionServer |
 | [YARN-8650](https://issues.apache.org/jira/browse/YARN-8650) | Major | Fixed | [YARN-8331.002.patch](https://issues.apache.org/jira/secure/attachment/12934881/YARN-8331.002.patch) | [YARN-8650](https://github.com/lujiefsi/CrashTuner/blob/master/detail/YARN-8650.md) | ContainerId |
-| [CASSANDRA-15131](https://issues.apache.org/jira/browse/CASSANDRA-15131) | Major | Unresolved | [PULL-322](https://github.com/apache/cassandra/pull/322) | [CASSANDRA-15131](https://github.com/lujiefsi/CrashTuner/blob/master/detail/CASSANDRA-15131) | InetAddressAndPort |
+| [CASSANDRA-15131](https://issues.apache.org/jira/browse/CASSANDRA-15131) | Normal | Unresolved | [PULL-322](https://github.com/apache/cassandra/pull/322) | [CASSANDRA-15131](https://github.com/lujiefsi/CrashTuner/blob/master/detail/CASSANDRA-15131) | InetAddressAndPort |
 
 ## Reproduce
 
 There are two ways to reproduce the bugs found by CrashTuner.
 
-1. We have write some unit tests in patches, you can change the source code to re-test them.
+1. We have written some unit tests in patches, you can change the source code to re-test them.
 2. We have provide a docker image to reproduce all new bugs, see  [document](TODO)  or [video](TODO) .
-3. if you want CrashTuner to improve your business distributed system reliability, please contact market@tianqisoft.cn, or 0574-87630862.
+
+
+
+## Portability
+
+Currently, we only apply CrashTuner on the distributed system that written in java, but we also investigate the distributed system written by other language, like [K8s](https://kubernetes.io/) written in **Golang**. We find that CrashTuner can also help it improve the reliability. Below is our studied bugs in  k8s and we are implementing another version CrashTuner to detect them:
+
+  
+
+| #78782 |      |      |      |
+| ------ | ---- | ---- | ---- |
+|        |      |      |      |
+|        |      |      |      |
+|        |      |      |      |
+|        |      |      |      |
+|        |      |      |      |
+
+
 
 ## Others
 
 ### How to determine the bug Priority?
 
-JIRA has 5 level Priority:Blocker, Critical, Major, Minor and Trivial
+JIRA has 5 level Priority:Blocker, Critical, Major(Cassandra is Normal), Minor and Trivial
 
-When we create a bug issue, JIRA will assign a default Priority as "Major". If the origin developers think the bug has more serious affection,  they will change the Priority as Critical or Blocker, like [YARN-9194](<https://issues.apache.org/jira/browse/YARN-9194>). Of course, some bugs' affections are not  serious as we think, the origin developers  may change their Priority  as Minor or Trivial, like  [HBASE-22023](<https://issues.apache.org/jira/browse/HBASE-22023>).
+When we create a bug issue, JIRA will assign a default Priority as "Major". If the origin developers think the bug has more serious affection,  they will change the Priority as Critical or Blocker, like [YARN-9194](<https://issues.apache.org/jira/browse/YARN-9194>). Of course, some bugs' affections are not  serious as we think, the origin developers will change their Priority  as Minor or Trivial, like  [HBASE-22023](<https://issues.apache.org/jira/browse/HBASE-22023>).
+
+## Cooperation
+
+if you want CrashTuner to improve your business distributed system reliability, please contact market@tianqisoft.cn, or 0574-87630862.
 
 
 
