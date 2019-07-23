@@ -4,7 +4,7 @@
 This the report of bugs that found by CrashTuner. We will give the detail of how to trigger each bug. Besides, we also give a simple version of CrashTuner in docker to show how CrashTuner find these bugs.
 ## New bugs
 
-In the below table, we give all new bugs((all our studied bugs and their detail exists in [old bugs](https://github.com/lujiefsi/CrashTuner/tree/master/detail/old bugs) found by CrashTuner. You can click the Bug Id to see the bug report and Patch to see the fixing, and Detail to see how to trigger the bug. In the detail, we only show a small code snippet, you can download the whole buggy project code(which can be found in bug report) for further understanding.
+In the below table, we give all new bugs((all our studied bugs and their detail exists in [old bugs](https://github.com/lujiefsi/CrashTuner/tree/master/detail/old%20bugs) found by CrashTuner. You can click the Bug Id to see the bug report and Patch to see the fixing, and Detail to see how to trigger the bug. In the detail, we only show a small code snippet, you can download the whole buggy project code(which can be found in bug report) for further understanding.
 
 |Bug Id  |Priority |Status |Patch|Detail|Meta-info|
 | :------:  | :------: | :------: | :------: | :------: | :------: |
