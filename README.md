@@ -56,10 +56,3 @@ We believe that CrashTuner has good portability and we are doing large work on d
 JIRA has 5 level Priority: Blocker, Critical, Major(Cassandra is Normal), Minor and Trivial
 
 When we create a bug issue, JIRA will assign a default Priority as "Major". If the origin developers think the bug has more serious affection,  they will change the Priority as Critical or Blocker, like [YARN-9194](<https://issues.apache.org/jira/browse/YARN-9194>). Of course, some bugs' affections are not  serious as we think, the origin developers will change their Priority  as Minor or Trivial, like  [HBASE-22023](<https://issues.apache.org/jira/browse/HBASE-22023>).
-
-## Cooperation
-
-if you want CrashTuner to improve your business distributed system reliability, please contact market@tianqisoft.cn, or 0574-87630862.
-
-
-
