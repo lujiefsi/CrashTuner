@@ -1,6 +1,15 @@
 # CrashTuner
 
+## What is CrashTuner
+
+CrashTuner is fault injection framework for distributed system. CrashTuner has two independent part: **Crash Point Identification (CRI) **and **Fault Injection Test (FIT)**. 
+
+Currently, 
+
+
+
 ## What can you get from this project?
+
 This the report of bugs that found by CrashTuner. We will give the detail of how to trigger each bug. Besides, we also give a simple version of CrashTuner in docker to show how CrashTuner find these bugs.
 
 ## Old Bugs
@@ -10,6 +19,8 @@ All our studied bugs and their detail exists in [old bugs](https://github.com/lu
 ## New bugs
 
 In the below table, we give all new bugs found by CrashTuner. You can click the Bug Id to see the bug report and Patch to see the fixing, and Detail to see how to trigger the bug. In the detail, we only show a small code snippet, you can download the whole buggy project code(which can be found in bug report) for further understanding.
+
+Some  bugs are marked as "Duplicate" in its issue because they are fixed together with other issue, as the developer required.  
 
 |Bug Id  |Priority |Status |Patch|Detail|Meta-info|
 | :------:  | :------: | :------: | :------: | :------: | :------: |
