@@ -1,7 +1,7 @@
 # To deproduce bugs in docker
 
-####0. Environment
-You need to install docker first, see`https://docs.docker.com/compose/install/`
+#### 0. Environment
+You need to install docker first, see [https://docs.docker.com/compose/install/](https://docs.docker.com/compose/install/ "docker install").
 
 #### 1. clone git && cd CrashTuner
 `git clone https://github.com/lujiefsi/CrashTuner.git && cd CrashTuner && chmod +x ./*.sh`
@@ -18,5 +18,8 @@ The result generates in ./result.txt. The result for each bug formated as below
     https://issues.apache.org/jira/browse/YARN-9201
     =====================================Result:===========================================
     #important log lines 
+	#the file path here presented the path in docker, correspond logs exist in CrashTuner/logs/${BUGID}
 	/home/test/DisReproduce/logs/YARN_9238/hadoop-test-resourcemanager-hadoop11.log:java.lang.NullPointerException
     =======================================================================================
+	
+and you can see all the logs during reproduce in CrashTuner/logs/${BUGID}
