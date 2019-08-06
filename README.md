@@ -48,7 +48,7 @@ Some  bugs are marked as "Duplicate" in its issue because they are fixed togethe
 There are two ways to reproduce the bugs found by CrashTuner.
 
 1. We have written some unit tests in patches, you can change the source code to re-test them.
-2. We have provide a docker image to reproduce all new bugs, see  [document](TODO)  or [video](TODO) .
+2. We have provide a docker image to reproduce all new bugs, see  [document](https://github.com/lujiefsi/CrashTuner/tree/master/HowToReproduce.md).
 
 
 
