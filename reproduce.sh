@@ -6,7 +6,7 @@ version="v0.8.6"
 # ./DisReproduce.sh NullP YARN_9223 $version >/dev/null 2>&1
 # docker cp -a hadoop11:/home/test/DisReproduce/logs/ ./
 # echo "" >> ./result.txt
-echo "=====================================BugLink:==========================================" >> ./result.txt
+# echo "=====================================BugLink:==========================================" >> ./result.txt
 # echo "" >> ./result.txt
 # ./get_result.sh NullP YARN_9223 >> ./result.txt
 echo "" > ./result.txt
@@ -79,6 +79,16 @@ echo "" >> ./result.txt
 echo "=====================================BugLink:==========================================" >> ./result.txt
 echo "https://issues.apache.org/jira/browse/YARN-9194" >> ./result.txt
 ./get_result.sh InvalidStateTransitionException YARN_9194 >> ./result.txt
+
+#HBASE_22017
+echo "Processing bug HBASE_22017"
+./restart.sh >/dev/null 2>&1
+./DisReproduce.sh LeaseException HBASE_22017 $version >/dev/null 2>&1
+docker cp -a hadoop11:/home/test/DisReproduce/logs/ ./
+echo "" >> ./result.txt
+echo "=====================================BugLink:==========================================" >> ./result.txt
+echo "https://issues.apache.org/jira/browse/HBASE_22017" >> ./result.txt
+./get_result.sh LeaseException HBASE_22017 >> ./result.txt
 
 #HBASE_22041
 echo "Processing bug HBASE_22041"
