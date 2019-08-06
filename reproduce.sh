@@ -7,7 +7,7 @@ version="0.8.6" > ./result.txt
 # docker cp -a hadoop11:/home/test/DisReproduce/logs/ ./
 # echo "=====================================BugLink:==========================================" > ./result.txt
 # echo "" > ./result.txt
-# ./get_result NullP YARN_9223 > ./result.txt
+# ./get_result.sh NullP YARN_9223 > ./result.txt
 
 #YARN-9238
 echo "Processing bug YARN-9238"
@@ -16,7 +16,7 @@ echo "Processing bug YARN-9238"
 docker cp -a hadoop11:/home/test/DisReproduce/logs/ ./
 echo "=====================================BugLink:==========================================" > ./result.txt
 echo "https://issues.apache.org/jira/browse/YARN-9238" > ./result.txt
-./get_result NullP YARN_9238 > ./result.txt
+./get_result.sh NullP YARN_9238 > ./result.txt
 
 #YARN-9248
 echo "Processing bug YARN_9248"
@@ -25,7 +25,7 @@ echo "Processing bug YARN_9248"
 docker cp -a hadoop11:/home/test/DisReproduce/logs/ ./
 echo "=====================================BugLink:==========================================" > ./result.txt
 echo "https://issues.apache.org/jira/browse/YARN-9248" > ./result.txt
-./get_result NullP YARN_9248 > ./result.txt
+./get_result.sh NullP YARN_9248 > ./result.txt
 
 #HDFS_14372
 echo "Processing bug HDFS_14372"
@@ -34,7 +34,7 @@ echo "Processing bug HDFS_14372"
 docker cp -a hadoop11:/home/test/DisReproduce/logs/ ./
 echo "=====================================BugLink:==========================================" > ./result.txt
 echo "https://issues.apache.org/jira/browse/HDFS-14372" > ./result.txt
-./get_result NullP HDFS_14372 > ./result.txt
+./get_result.sh NullP HDFS_14372 > ./result.txt
 
 #YARN-9165
 echo "Processing bug YARN-9165"
@@ -43,7 +43,7 @@ echo "Processing bug YARN-9165"
 docker cp -a hadoop11:/home/test/DisReproduce/logs/ ./
 echo "=====================================BugLink:==========================================" > ./result.txt
 echo "https://issues.apache.org/jira/browse/YARN-9165" > ./result.txt
-./get_result NullP YARN_9165 > ./result.txt
+./get_result.sh NullP YARN_9165 > ./result.txt
 
 #YARN-9201
 echo "Processing bug YARN-9201"
@@ -52,7 +52,7 @@ echo "Processing bug YARN-9201"
 docker cp -a hadoop11:/home/test/DisReproduce/logs/ ./
 echo "=====================================BugLink:==========================================" > ./result.txt
 echo "https://issues.apache.org/jira/browse/YARN-9201" > ./result.txt
-./get_result InvalidStateTransitionException YARN_9201 > ./result.txt
+./get_result.sh InvalidStateTransitionException YARN_9201 > ./result.txt
 
 #YARN-8649
 echo "Processing bug YARN-8649"
@@ -61,7 +61,7 @@ echo "Processing bug YARN-8649"
 docker cp -a hadoop11:/home/test/DisReproduce/logs/ ./
 echo "=====================================BugLink:==========================================" > ./result.txt
 echo "https://issues.apache.org/jira/browse/YARN-8649" > ./result.txt
-./get_result NullP YARN_8649 > ./result.txt
+./get_result.sh NullP YARN_8649 > ./result.txt
 
 #YARN-9201
 echo "Processing bug YARN-9194"
@@ -70,7 +70,7 @@ echo "Processing bug YARN-9194"
 docker cp -a hadoop11:/home/test/DisReproduce/logs/ ./
 echo "=====================================BugLink:==========================================" > ./result.txt
 echo "https://issues.apache.org/jira/browse/YARN-9194" > ./result.txt
-./get_result InvalidStateTransitionException YARN_9194 > ./result.txt
+./get_result.sh InvalidStateTransitionException YARN_9194 > ./result.txt
 
 #HBASE_22041
 echo "Processing bug HBASE_22041"
@@ -79,7 +79,7 @@ echo "Processing bug HBASE_22041"
 docker cp -a hadoop11:/home/test/DisReproduce/logs/ ./
 echo "=====================================BugLink:==========================================" > ./result.txt
 echo "https://issues.apache.org/jira/browse/HBASE-22041" > ./result.txt
-./get_result hbase-test-master-hadoop11.log HBASE_22041 > ./result.txt
+./get_result.sh hbase-test-master-hadoop11.log HBASE_22041 > ./result.txt
 
 #HBASE_22050
 echo "Processing bug HBASE_22050"
@@ -88,7 +88,7 @@ echo "Processing bug HBASE_22050"
 docker cp -a hadoop11:/home/test/DisReproduce/logs/ ./
 echo "=====================================BugLink:==========================================" > ./result.txt
 echo "https://issues.apache.org/jira/browse/HBASE-22050" > ./result.txt
-./get_result NullP HBASE_22050 > ./result.txt
+./get_result.sh NullP HBASE_22050 > ./result.txt
 
 #HBASE_21740
 echo "Processing bug HBASE_21740"
@@ -97,7 +97,7 @@ echo "Processing bug HBASE_21740"
 docker cp -a hadoop11:/home/test/DisReproduce/logs/ ./
 echo "=====================================BugLink:==========================================" > ./result.txt
 echo "https://issues.apache.org/jira/browse/HBASE-21740" > ./result.txt
-./get_result NullP HBASE_21740 > ./result.txt
+./get_result.sh NullP HBASE_21740 > ./result.txt
 
 #HBASE_22023
 echo "Processing bug HBASE_22023"
@@ -106,7 +106,7 @@ echo "Processing bug HBASE_22023"
 docker cp -a hadoop11:/home/test/DisReproduce/logs/ ./
 echo "=====================================BugLink:==========================================" > ./result.txt
 echo "https://issues.apache.org/jira/browse/HBASE-22023" > ./result.txt
-./get_result NullP HBASE_22023 > ./result.txt
+./get_result.sh NullP HBASE_22023 > ./result.txt
 
 #HDFS_14216
 echo "Processing bug HDFS_14216"
@@ -115,7 +115,7 @@ echo "Processing bug HDFS_14216"
 docker cp -a hadoop11:/home/test/DisReproduce/logs/ ./
 echo "=====================================BugLink:==========================================" > ./result.txt
 echo "https://issues.apache.org/jira/browse/HDFS-14216" > ./result.txt
-./get_result NullP HDFS_14216 > ./result.txt
+./get_result.sh NullP HDFS_14216 > ./result.txt
 
 rm ./logs/driver.log
 rm ./logs/service.log
