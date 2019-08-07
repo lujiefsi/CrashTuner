@@ -20,6 +20,17 @@ echo "=====================================BugLink:=============================
 echo "https://issues.apache.org/jira/browse/YARN-9238" >> ./result.txt
 ./get_result.sh NullP YARN_9238 >> ./result.txt
 
+#YARN-9164
+echo "Processing bug YARN-9164"
+./restart.sh >/dev/null 2>&1
+./DisReproduce.sh NullP YARN_9164 $version >/dev/null 2>&1
+docker cp -a hadoop11:/home/test/DisReproduce/logs/ ./
+echo "" >> ./result.txt
+echo "=====================================BugLink:==========================================" >> ./result.txt
+echo "This bug trigger success randomly, due to randomness of allocation of slave container" >> ./result.txt
+echo "https://issues.apache.org/jira/browse/YARN-9164" >> ./result.txt
+./get_result.sh NullP YARN_9164 >> ./result.txt
+
 #YARN-9248
 echo "Processing bug YARN_9248"
 ./restart.sh >/dev/null 2>&1
@@ -49,6 +60,17 @@ echo "" >> ./result.txt
 echo "=====================================BugLink:==========================================" >> ./result.txt
 echo "https://issues.apache.org/jira/browse/YARN-9165" >> ./result.txt
 ./get_result.sh NullP YARN_9165 >> ./result.txt
+
+#YARN_9193
+echo "Processing bug YARN-9193"
+./restart.sh >/dev/null 2>&1
+./DisReproduce.sh NullP YARN_9193 $version >/dev/null 2>&1
+docker cp -a hadoop11:/home/test/DisReproduce/logs/ ./
+echo "" >> ./result.txt
+echo "=====================================BugLink:==========================================" >> ./result.txt
+echo "This bug trigger success randomly, due to randomance of allocation of slave container" >> ./result.txt
+echo "https://issues.apache.org/jira/browse/YARN-9193" >> ./result.txt
+./get_result.sh NullP YARN_9193 >> ./result.txt
 
 #YARN-9201
 echo "Processing bug YARN-9201"

@@ -32,10 +32,12 @@ and you can see all the logs during reproduce in CrashTuner/logs/${BUGID}
 	./DisReproduce.sh InvalidStateTransitionException YARN_9201 v0.8.6
 	./DisReproduce.sh NullP YARN_8649 v0.8.6
 	./DisReproduce.sh InvalidStateTransitionException YARN_9194 v0.8.6
+	./DisReproduce.sh LeaseException HBASE_22017 v0.8.6
 	./DisReproduce.sh hbase-test-master-hadoop11.log HBASE_22041 v0.8.6
 	./DisReproduce.sh NullP HBASE_22050 v0.8.6
 	./DisReproduce.sh NullP HBASE_21740 v0.8.6
 	./DisReproduce.sh NullP HBASE_22023 v0.8.6
 	./DisReproduce.sh NullP HDFS_14216 v0.8.6
-	
+	./DisReproduce.sh NullP YARN_9164 v0.8.6
+	./DisReproduce.sh NullP YARN_9193 v0.8.6	
 	
