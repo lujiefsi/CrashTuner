@@ -1,7 +1,7 @@
 # To deproduce bugs in docker
 
 #### 0. Environment
-You need to install docker first, see [https://docs.docker.com/compose/install/](https://docs.docker.com/compose/install/ "docker install").
+You need to install docker first, see [https://docs.docker.com/install/linux/docker-ce/ubuntu/](https://docs.docker.com/install/linux/docker-ce/ubuntu/ "docker install") or [https://phoenixnap.com/kb/how-to-install-docker-on-ubuntu-18-04](https://phoenixnap.com/kb/how-to-install-docker-on-ubuntu-18-04 "docker install").
 
 #### 1. clone git && cd CrashTuner
 `git clone https://github.com/lujiefsi/CrashTuner.git && cd CrashTuner && chmod +x ./*.sh`
@@ -41,4 +41,5 @@ and you can see all the logs during reproduce in CrashTuner/logs/${BUGID}
 	./DisReproduce.sh NullP YARN_9164 v0.8.6
 	./DisReproduce.sh NullP YARN_9193 v0.8.6	
 Maybe need sudo before each command.
+If you need to reprodue another bug after reproduce one bug, you need to `(sudo) ./restart` to clean remain.
 	
