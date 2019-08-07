@@ -15,11 +15,11 @@ or `./reproduce.sh` if you don&apos;t need to exec docker with `sudo`
 The result generates in ./result.txt. The result for each bug formated as below
 
     =====================================BugLink:==========================================
-    https://issues.apache.org/jira/browse/YARN-9201
+    https://issues.apache.org/jira/browse/${BUGID}
     =====================================Result:===========================================
     #important log lines 
 	#the file path here presented the path in docker, correspond logs exist in CrashTuner/logs/${BUGID}
-	/home/test/DisReproduce/logs/YARN_9238/hadoop-test-resourcemanager-hadoop11.log:java.lang.NullPointerException
+	/home/test/DisReproduce/logs/${BUGID}/hadoop-test-resourcemanager-hadoop11.log:java.lang.NullPointerException
     =======================================================================================
 	
 and you can see all the logs during reproduce in CrashTuner/logs/${BUGID}
@@ -40,4 +40,5 @@ and you can see all the logs during reproduce in CrashTuner/logs/${BUGID}
 	./DisReproduce.sh NullP HDFS_14216 v0.8.6
 	./DisReproduce.sh NullP YARN_9164 v0.8.6
 	./DisReproduce.sh NullP YARN_9193 v0.8.6	
+Maybe need sudo before each command.
 	
