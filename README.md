@@ -2,10 +2,7 @@
 
 ## What is CrashTuner
 
-CrashTuner is fault injection framework for distributed system. CrashTuner has two independent part: **Crash Point Identification (CRI) **and **Fault Injection Test (FIT)**. 
-
-Currently, 
-
+CrashTuner is fault injection framework for distributed system. 
 
 
 ## What can you get from this project?
