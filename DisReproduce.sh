@@ -1,6 +1,7 @@
 astr=$1
 bstr=$2
 hbv=$3
+docker network create -d bridge --subnet=172.16.0.0/16   --gateway=172.16.0.1   --ip-range=172.16.1.0/24 hdnetwork
 docker run -itd --name hadoop11 --network hdnetwork --ip 172.16.1.128 --hostname hadoop11  lczxxx123/disreproduce:$3 /bin/bash
 docker run -itd --name hadoop12 --network hdnetwork --ip 172.16.1.129 --hostname hadoop12  lczxxx123/disreproduce:$3 /bin/bash
 docker run -itd --name hadoop13 --network hdnetwork --ip 172.16.1.130 --hostname hadoop13  lczxxx123/disreproduce:$3 /bin/bash

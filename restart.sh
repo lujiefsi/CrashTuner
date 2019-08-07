@@ -4,3 +4,4 @@ docker stop hadoop13
 docker rm hadoop11
 docker rm hadoop12
 docker rm hadoop13
+docker network rm hdnetwork
