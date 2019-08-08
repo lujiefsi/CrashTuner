@@ -1,12 +1,14 @@
 # To deproduce bugs in docker
 
+Our experiment implemented on only one VM with three docker instance as distribute node run on it, so **it will take a long time to reproduce a bug.**
 #### 0. Environment
 You need to install docker first, see [https://docs.docker.com/install/linux/docker-ce/ubuntu/](https://docs.docker.com/install/linux/docker-ce/ubuntu/ "docker install") or [https://phoenixnap.com/kb/how-to-install-docker-on-ubuntu-18-04](https://phoenixnap.com/kb/how-to-install-docker-on-ubuntu-18-04 "docker install").
+**We only test this in ubuntu 18.04.**
 
 #### 1. clone git && cd CrashTuner
 `git clone https://github.com/lujiefsi/CrashTuner.git && cd CrashTuner && chmod +x ./*.sh`
 #### 2. pull latest docker from docker hub
-`sudo docker pull lczxxx123/disreproduce:v0.8.6 ` or `docker pull lczxxx123/disreproduce:v0.8.6 `
+`sudo docker pull lczxxx123/disreproduce:v0.8.8 ` or `docker pull lczxxx123/disreproduce:v0.8.8`
 #### 3. reproduce bugs
 Each bugs may take a long time(about 10 mins) to reproduce
 `sudo ./reproduce.sh` 
