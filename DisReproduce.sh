@@ -55,16 +55,16 @@ docker exec -it --user test hadoop11 bash -c "sed -i '1s/^/0.0.0.0,/' /home/test
 docker exec -it --user test hadoop12 bash -c "sed -i '1s/^/0.0.0.0,/' /home/test/.ssh/known_hosts"
 docker exec -it --user test hadoop13 bash -c "sed -i '1s/^/0.0.0.0,/' /home/test/.ssh/known_hosts"
 
-docker exec -e JAVA_HOME=/home/test/program/jdk1.8.0_65 -i --user test hadoop11 bash -c "bash /home/test/logstash-6.5.4/startup.sh" /dev/null 2>&1 &
-docker exec -e JAVA_HOME=/home/test/program/jdk1.8.0_65 -i --user test hadoop12 bash -c "bash /home/test/logstash-6.5.4/startup.sh" /dev/null 2>&1 &
-docker exec -e JAVA_HOME=/home/test/program/jdk1.8.0_65 -i --user test hadoop13 bash -c "bash /home/test/logstash-6.5.4/startup.sh" /dev/null 2>&1 &
+docker exec -e JAVA_HOME=/home/test/program/jdk1.8.0_65 -i --user test hadoop11 bash -c "bash /home/test/logstash-6.5.4/startup.sh" >/dev/null 2>&1 &
+docker exec -e JAVA_HOME=/home/test/program/jdk1.8.0_65 -i --user test hadoop12 bash -c "bash /home/test/logstash-6.5.4/startup.sh" >/dev/null 2>&1 &
+docker exec -e JAVA_HOME=/home/test/program/jdk1.8.0_65 -i --user test hadoop13 bash -c "bash /home/test/logstash-6.5.4/startup.sh" >/dev/null 2>&1 &
 
-echo "waiting for starting(60s)"
+echo "waiting for LogStash startup(60s)"
 sleep 20s
 echo "20s pass"
 sleep 20s
 echo "40s pass"
-sleep 30s
+sleep 20s
 echo "60s pass"
 
 docker exec -it --user test hadoop11 bash -c "/home/test/program/jdk1.8.0_65/bin/java -jar /home/test/DisReproduce/target/DisReproduce.jar /home/test/DisReproduce $2"

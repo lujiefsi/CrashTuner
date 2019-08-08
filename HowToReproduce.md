@@ -41,5 +41,5 @@ and you can see all the logs during reproduce in CrashTuner/logs/${BUGID}
 	./DisReproduce.sh NullP YARN_9164 v0.8.6
 	./DisReproduce.sh NullP YARN_9193 v0.8.6	
 Maybe need sudo before each command.
-If you need to reprodue another bug after reproduce one bug, you need to `(sudo) ./restart` to clean remain.
+If you need to reprodue another bug after reproduce one bug, you need to `(sudo) ./restart`.
 	
