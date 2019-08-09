@@ -46,6 +46,7 @@ There are two ways to reproduce the bugs found by CrashTuner.
 
 1. We have written some unit tests in patches, you can change the source code to re-test them.
 2. We have provide a docker image to reproduce all new bugs, see  [document](https://github.com/lujiefsi/CrashTuner/tree/master/HowToReproduce.md).
+3. We are working on reproducing old bugs and will add into git later.
 
 
 
