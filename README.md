@@ -1,5 +1,7 @@
 # CrashTuner
 
+For SOSP19 Artifact submission review see [document](https://github.com/lujiefsi/CrashTuner/tree/master/HowToReproduce.md).
+
 ## What is CrashTuner
 
 CrashTuner is fault injection framework for distributed system. 
