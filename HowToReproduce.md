@@ -11,7 +11,7 @@ You need to install docker first, see [https://docs.docker.com/install/linux/doc
 **Keep your work area in CrashTuner directory**
 #### 2. pull latest docker from docker hub
 `sudo docker pull lczxxx123/disreproduce:v0.8.8 ` or `docker pull lczxxx123/disreproduce:v0.8.8`
-#### 3. reproduce bugs
+#### 3. Reproduce all bugs one time
 Each bugs may take a long time(about 10 mins) to reproduce
 `sudo ./reproduce.sh` 
 or `./reproduce.sh` if you don&apos;t need to exec docker with `sudo`
@@ -36,17 +36,45 @@ Maybe need sudo before each command.
 If you need to reprodue another bug after reproduce one bug, you need to `(sudo) ./restart`.
 	
 #### 5. Result
-The result generates in ./result.txt. The result for each bug formated as below
+if you reproduce all bugs one time, the result generates in ./result.txt.
+If you reproduce one bug one time, the result is printed directly in console.
+The result for each bug formated as below
 
     =====================================BugLink:==========================================
     https://issues.apache.org/jira/browse/${BUGID}
     =====================================Result:===========================================
-    #important log lines 
-	#the file path here presented the path in docker, correspond logs exist in CrashTuner/logs/${BUGID}
-	/home/test/DisReproduce/logs/${BUGID}/hadoop-test-resourcemanager-hadoop11.log:java.lang.NullPointerException
+    log-file:linenumber: expected-exception
     =======================================================================================
 	
-and you can see all the logs during reproduce in CrashTuner/logs/${BUGID}
+
+BugLink is the issue  site that we report each bug, it contains the excetpion that will be thrwon when the bug is triggered.
+
+Result will give  which log file and which line that the expected exception exists. You can check the log file for detail(like stack trace).
+
+For YARN-9164, you may see that multiple  result like:
+```
+=====================================BugLink:==========================================
+This bug trigger success randomly, due to randomness of allocation of slave container
+https://issues.apache.org/jira/browse/YARN-9164
+=====================================Result:==========================================
+./logs/YARN_9164/userlogs/application_1565430468786_0001/container_1565430468786_0001_01_000001/syslog:108:java.lang.NullPointerException: java.lang.NullPointerException
+./logs/YARN_9164/userlogs/application_1565430468786_0001/container_1565430468786_0001_01_000001/syslog:150:Caused by: org.apache.hadoop.ipc.RemoteException(java.lang.NullPointerException): java.lang.NullPointerException
+./logs/YARN_9164/hadoop-test-resourcemanager-hadoop11.log:275:java.lang.NullPointerException
+./logs/YARN_9164/hadoop-test-resourcemanager-hadoop11.log:373:java.lang.NullPointerException
+======================================================================================
+```
+in such case, you should read each log file for detail, and see which exception is expected. In this bug, the exception at line 373 in file ./logs/YARN_9164/hadoop-test-resourcemanager-hadoop11.log is expected,  because it is same as we report in BugLink:
+```
+2019-08-10 09:58:44,156 FATAL org.apache.hadoop.yarn.event.EventDispatcher: Error in handling event type APP_ATTEMPT_REMOVED to the Event Dispatcher
+java.lang.NullPointerException
+        at org.apache.hadoop.yarn.server.resourcemanager.scheduler.AbstractYarnScheduler.completedContainer(AbstractYarnScheduler.java:696)
+        at org.apache.hadoop.yarn.server.resourcemanager.scheduler.capacity.CapacityScheduler.doneApplicationAttempt(CapacityScheduler.java:1123)
+        at org.apache.hadoop.yarn.server.resourcemanager.scheduler.capacity.CapacityScheduler.handle(CapacityScheduler.java:1827)
+        at org.apache.hadoop.yarn.server.resourcemanager.scheduler.capacity.CapacityScheduler.handle(CapacityScheduler.java:171)
+        at org.apache.hadoop.yarn.event.EventDispatcher$EventProcessor.run(EventDispatcher.java:66)
+        at java.lang.Thread.run(Thread.java:745)
+```
+
 
 For HBASE_22041, it will hang staup process forever and print thounds of logs. But in order to speed up the reproduce, we only make this bug run a few minutes and print last five log statements.Its error log can be like:
 ```
