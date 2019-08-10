@@ -55,5 +55,5 @@ For HBASE_22041, it will hang staup process forever and print thounds of logs. B
 2019-08-10 08:58:13,687 WARN  [RSProcedureDispatcher-pool4-t31] procedure.RSProcedureDispatcher: request to server hadoop12.hdnetwork,16020,1565427268910 failed due to org.apache.hadoop.hbase.ipc.FailedServerException: Call to hadoop12.hdnetwork/172.16.1.129:16020 failed on local exception: org.apache.hadoop.hbase.ipc.FailedServerException: This server is in the failed servers list: hadoop12.hdnetwork/172.16.1.129:16020, try=1310, retrying...>
 ```
 
-### 5. Failed to Reproduce
+### 6. Failed to Reproduce
 We have reproduced all bugs successfully in our VM. If you can't reproduce one bug, you can try again by running it alone. But if the bug still fails to reproduce, please create an issue and attatch the runtime logs. 
