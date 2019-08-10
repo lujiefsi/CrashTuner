@@ -72,8 +72,8 @@ sleep 5s
 docker cp -a hadoop11:/home/test/DisReproduce/logs/ ./
 echo "=====================================Result:=========================================="
 if [ "$2" = "HBASE_22041" -o "$2" = "HBASE_" ];then
-        docker exec -it --user test hadoop11 bash -c "tail ./logs/$2/$1"
+        tail ./logs/$2/$1
 else
-        docker exec -it --user test hadoop11 bash -c "grep $1 -nr ./logs/$2/"
+        grep $1 -nr ./logs/$2/
 fi
 echo "======================================================================================"

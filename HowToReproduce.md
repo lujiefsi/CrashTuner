@@ -7,6 +7,8 @@ You need to install docker first, see [https://docs.docker.com/install/linux/doc
 
 #### 1. clone git && cd CrashTuner
 `git clone https://github.com/lujiefsi/CrashTuner.git && cd CrashTuner && chmod +x ./*.sh`
+
+**Keep your work area in CrashTuner directory **
 #### 2. pull latest docker from docker hub
 `sudo docker pull lczxxx123/disreproduce:v0.8.8 ` or `docker pull lczxxx123/disreproduce:v0.8.8`
 #### 3. reproduce bugs
