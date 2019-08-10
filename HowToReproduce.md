@@ -15,9 +15,7 @@ You need to install docker first, see [https://docs.docker.com/install/linux/doc
 Each bugs may take a long time(about 10 mins) to reproduce
 `sudo ./reproduce.sh` 
 or `./reproduce.sh` if you don&apos;t need to exec docker with `sudo`
-#### 4. Reproduce single bug
-Maybe a bug are not reproduced success, you can try again by run it alone. 
-If you still can't reproduce this bug, please create a issue and attatch the runtime logs.
+#### 4. Reproduce a single bug
 
 	./DisReproduce.sh NullP YARN_9238 v0.8.8
 	./DisReproduce.sh InvalidStateTransitionException YARN_9248 v0.8.8
@@ -56,3 +54,6 @@ For HBASE_22041, it will hang staup process forever and print thounds of logs. B
 2019-08-10 08:58:13,586 WARN  [RSProcedureDispatcher-pool4-t30] procedure.RSProcedureDispatcher: request to server hadoop12.hdnetwork,16020,1565427268910 failed due to org.apache.hadoop.hbase.ipc.FailedServerException: Call to hadoop12.hdnetwork/172.16.1.129:16020 failed on local exception: org.apache.hadoop.hbase.ipc.FailedServerException: This server is in the failed servers list: hadoop12.hdnetwork/172.16.1.129:16020, try=1309, retrying...
 2019-08-10 08:58:13,687 WARN  [RSProcedureDispatcher-pool4-t31] procedure.RSProcedureDispatcher: request to server hadoop12.hdnetwork,16020,1565427268910 failed due to org.apache.hadoop.hbase.ipc.FailedServerException: Call to hadoop12.hdnetwork/172.16.1.129:16020 failed on local exception: org.apache.hadoop.hbase.ipc.FailedServerException: This server is in the failed servers list: hadoop12.hdnetwork/172.16.1.129:16020, try=1310, retrying...>
 ```
+
+### 5. Failed to Reproduce
+We have reproduced all bugs successfully in our VM. If you can't reproduce one bug, you can try again by running it alone. But if the bug still fails to reproduce, please create an issue and attatch the runtime logs. 
