@@ -15,19 +15,9 @@ You need to install docker first, see [https://docs.docker.com/install/linux/doc
 Each bugs may take a long time(about 10 mins) to reproduce
 `sudo ./reproduce.sh` 
 or `./reproduce.sh` if you don&apos;t need to exec docker with `sudo`
-#### 4. Result
-The result generates in ./result.txt. The result for each bug formated as below
-
-    =====================================BugLink:==========================================
-    https://issues.apache.org/jira/browse/${BUGID}
-    =====================================Result:===========================================
-    #important log lines 
-	#the file path here presented the path in docker, correspond logs exist in CrashTuner/logs/${BUGID}
-	/home/test/DisReproduce/logs/${BUGID}/hadoop-test-resourcemanager-hadoop11.log:java.lang.NullPointerException
-    =======================================================================================
-	
-and you can see all the logs during reproduce in CrashTuner/logs/${BUGID}
-#### 5. Reproduce single bug
+#### 4. Reproduce single bug
+Maybe a bug are not reproduced success, you can try again by run it alone. 
+If you still can't reproduce this bug, please create a issue and attatch the runtime logs.
 
 	./DisReproduce.sh NullP YARN_9238 v0.8.8
 	./DisReproduce.sh InvalidStateTransitionException YARN_9248 v0.8.8
@@ -47,3 +37,22 @@ and you can see all the logs during reproduce in CrashTuner/logs/${BUGID}
 Maybe need sudo before each command.
 If you need to reprodue another bug after reproduce one bug, you need to `(sudo) ./restart`.
 	
+#### 5. Result
+The result generates in ./result.txt. The result for each bug formated as below
+
+    =====================================BugLink:==========================================
+    https://issues.apache.org/jira/browse/${BUGID}
+    =====================================Result:===========================================
+    #important log lines 
+	#the file path here presented the path in docker, correspond logs exist in CrashTuner/logs/${BUGID}
+	/home/test/DisReproduce/logs/${BUGID}/hadoop-test-resourcemanager-hadoop11.log:java.lang.NullPointerException
+    =======================================================================================
+	
+and you can see all the logs during reproduce in CrashTuner/logs/${BUGID}
+
+For HBASE_22041, it will hang staup process forever and print thounds of logs. But in order to speed up the reproduce, we only make this bug run a few minutes and print last five log statements.Its error log can be like:
+```
+2019-08-10 08:58:13,485 WARN  [RSProcedureDispatcher-pool4-t29] procedure.RSProcedureDispatcher: request to server hadoop12.hdnetwork,16020,1565427268910 failed due to org.apache.hadoop.hbase.ipc.FailedServerException: Call to hadoop12.hdnetwork/172.16.1.129:16020 failed on local exception: org.apache.hadoop.hbase.ipc.FailedServerException: This server is in the failed servers list: hadoop12.hdnetwork/172.16.1.129:16020, try=1308, retrying...
+2019-08-10 08:58:13,586 WARN  [RSProcedureDispatcher-pool4-t30] procedure.RSProcedureDispatcher: request to server hadoop12.hdnetwork,16020,1565427268910 failed due to org.apache.hadoop.hbase.ipc.FailedServerException: Call to hadoop12.hdnetwork/172.16.1.129:16020 failed on local exception: org.apache.hadoop.hbase.ipc.FailedServerException: This server is in the failed servers list: hadoop12.hdnetwork/172.16.1.129:16020, try=1309, retrying...
+2019-08-10 08:58:13,687 WARN  [RSProcedureDispatcher-pool4-t31] procedure.RSProcedureDispatcher: request to server hadoop12.hdnetwork,16020,1565427268910 failed due to org.apache.hadoop.hbase.ipc.FailedServerException: Call to hadoop12.hdnetwork/172.16.1.129:16020 failed on local exception: org.apache.hadoop.hbase.ipc.FailedServerException: This server is in the failed servers list: hadoop12.hdnetwork/172.16.1.129:16020, try=1310, retrying...>
+```
