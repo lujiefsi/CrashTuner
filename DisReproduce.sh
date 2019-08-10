@@ -68,10 +68,12 @@ docker exec -it --user test hadoop13 bash -c "sed -i '1s/^/0.0.0.0,/' /home/test
 #echo "60s pass"
 
 docker exec -it --user test hadoop11 bash -c "/home/test/program/jdk1.8.0_65/bin/java -jar /home/test/DisReproduce/target/DisReproduce.jar /home/test/DisReproduce $2"
+sleep 5s
+docker cp -a hadoop11:/home/test/DisReproduce/logs/ ./
 echo "=====================================Result:=========================================="
 if [ "$2" = "HBASE_22041" -o "$2" = "HBASE_" ];then
-        docker exec -it --user test hadoop11 bash -c "tail /home/test/DisReproduce/logs/$2/$1"
+        docker exec -it --user test hadoop11 bash -c "tail ./logs/$2/$1"
 else
-        docker exec -it --user test hadoop11 bash -c "grep $1 -r /home/test/DisReproduce/logs/$2/"
+        docker exec -it --user test hadoop11 bash -c "grep $1 -nr ./logs/$2/"
 fi
 echo "======================================================================================"
