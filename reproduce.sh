@@ -147,6 +147,16 @@ echo "=====================================BugLink:=============================
 echo "https://issues.apache.org/jira/browse/HDFS-14216" >> ./result.txt
 ./get_result.sh NullP HDFS_14216 >> ./result.txt
 
+
+#MR_7178
+echo "Processing bug MR_7178"
+./restart.sh >/dev/null 2>&1
+./DisReproduce.sh NullP MR_7178 $version 2>&1
+echo "" >> ./result.txt
+echo "=====================================BugLink:==========================================" >> ./result.txt
+echo "https://issues.apache.org/jira/browse/MAPREDUCE-7178" >> ./result.txt
+./get_result.sh NullP MR_7178 >> ./result.txt
+
 echo "Do aftermath"
 ./restart.sh >/dev/null 2>&1
 rm ./logs/driver.log
