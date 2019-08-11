@@ -31,7 +31,8 @@ or `./reproduce.sh` if you don&apos;t need to exec docker with `sudo`
 	./DisReproduce.sh NullP HBASE_22023 v0.8.8
 	./DisReproduce.sh NullP HDFS_14216 v0.8.8
 	./DisReproduce.sh NullP YARN_9164 v0.8.8
-	./DisReproduce.sh NullP YARN_9193 v0.8.8	
+	./DisReproduce.sh NullP YARN_9193 v0.8.8
+	./DisReproduce.sh NullP MR_7178 v0.8.8
 Maybe need sudo before each command.
 If you need to reprodue another bug after reproduce one bug, you need to `(sudo) ./restart`.
 	
