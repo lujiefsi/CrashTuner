@@ -35,6 +35,8 @@ or `./reproduce.sh` if you don&apos;t need to exec docker with `sudo`
 	./DisReproduce.sh NullP MR_7178 v0.8.8
 Maybe need sudo before each command.
 If you need to reprodue another bug after reproduce one bug, you need to `(sudo) ./restart`.
+
+Four bugs are has root cause and share same patch with above bugs, so we don't reproduce them alone.
 	
 #### 5. Result
 if you reproduce all bugs one time, the result generates in ./result.txt.
