@@ -1,4 +1,4 @@
-version="v0.8.8"
+version="v0.8.11"
 
 #YARN-9223
 # echo "Processing bug YARN-9223" 
@@ -156,6 +156,16 @@ echo "" >> ./result.txt
 echo "=====================================BugLink:==========================================" >> ./result.txt
 echo "https://issues.apache.org/jira/browse/MAPREDUCE-7178" >> ./result.txt
 ./get_result.sh NullP MR_7178 >> ./result.txt
+
+
+#YARN-8650
+echo "Processing bug YARN-8650"
+./restart.sh >/dev/null 2>&1
+./DisReproduce.sh InvalidStateTransitionException YARN_8650 $version 2>&1
+echo "" >> ./result.txt
+echo "=====================================BugLink:==========================================" >> ./result.txt
+echo "https://issues.apache.org/jira/browse/YARN-8650" >> ./result.txt
+./get_result.sh InvalidStateTransitionException YARN_8650 >> ./result.txt
 
 echo "Do aftermath"
 ./restart.sh >/dev/null 2>&1

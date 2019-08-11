@@ -1,6 +1,6 @@
 # To deproduce bugs in docker
 
-Our experiment implemented on only one VM(our VM:[8 kernal, 8GB RAM, 50GB Disk]) with three docker instance as distribute node run on it, so **it will take about 10min to reproduce a bug,** a better VM will accelerate the experiment.
+Our experiment implemented on only one VM(our VM:[1 or 4 kernal, 8GB RAM, 50GB Disk]) with three docker instance as distribute node run on it, so **it will take about 10min to reproduce a bug,** a better VM will accelerate the experiment.
 #### 0. Environment
 You need to install docker first, see [https://docs.docker.com/install/linux/docker-ce/ubuntu/](https://docs.docker.com/install/linux/docker-ce/ubuntu/ "docker install") or [https://phoenixnap.com/kb/how-to-install-docker-on-ubuntu-18-04](https://phoenixnap.com/kb/how-to-install-docker-on-ubuntu-18-04 "docker install").
 **We only test this in ubuntu 18.04.**
@@ -10,33 +10,34 @@ You need to install docker first, see [https://docs.docker.com/install/linux/doc
 
 **Keep your work area in CrashTuner directory**
 #### 2. pull latest docker from docker hub
-`sudo docker pull lczxxx123/disreproduce:v0.8.8 ` or `docker pull lczxxx123/disreproduce:v0.8.8`
+`sudo docker pull lczxxx123/disreproduce:v0.8.11 ` or `docker pull lczxxx123/disreproduce:v0.8.11`
 #### 3. Reproduce all bugs one time
 Each bugs may take a long time(about 10 mins) to reproduce
 `sudo ./reproduce.sh` 
 or `./reproduce.sh` if you don&apos;t need to exec docker with `sudo`
 #### 4. Reproduce a single bug
 
-	./DisReproduce.sh NullP YARN_9238 v0.8.8
-	./DisReproduce.sh InvalidStateTransitionException YARN_9248 v0.8.8
-	./DisReproduce.sh NullP HDFS_14372 v0.8.8
-	./DisReproduce.sh NullP YARN_9165 v0.8.8
-	./DisReproduce.sh InvalidStateTransitionException YARN_9201 v0.8.8
-	./DisReproduce.sh NullP YARN_8649 v0.8.8
-	./DisReproduce.sh InvalidStateTransitionException YARN_9194 v0.8.8
-	./DisReproduce.sh LeaseException HBASE_22017 v0.8.8
-	./DisReproduce.sh hbase-test-master-hadoop11.log HBASE_22041 v0.8.8
-	./DisReproduce.sh NullP HBASE_22050 v0.8.8
-	./DisReproduce.sh NullP HBASE_21740 v0.8.8
-	./DisReproduce.sh NullP HBASE_22023 v0.8.8
-	./DisReproduce.sh NullP HDFS_14216 v0.8.8
-	./DisReproduce.sh NullP YARN_9164 v0.8.8
-	./DisReproduce.sh NullP YARN_9193 v0.8.8
-	./DisReproduce.sh NullP MR_7178 v0.8.8
+	sudo ./DisReproduce.sh NullP YARN_9238 v0.8.11
+	sudo ./DisReproduce.sh InvalidStateTransitionException YARN_9248 v0.8.11
+	sudo ./DisReproduce.sh NullP HDFS_14372 v0.8.11
+	sudo ./DisReproduce.sh NullP YARN_9165 v0.8.11
+	sudo ./DisReproduce.sh InvalidStateTransitionException YARN_9201 v0.8.11
+	sudo ./DisReproduce.sh NullP YARN_8649 v0.8.11
+	sudo ./DisReproduce.sh InvalidStateTransitionException YARN_9194 v0.8.11
+	sudo ./DisReproduce.sh LeaseException HBASE_22017 v0.8.11
+	sudo ./DisReproduce.sh hbase-test-master-hadoop11.log HBASE_22041 v0.8.11
+	sudo ./DisReproduce.sh NullP HBASE_22050 v0.8.11
+	sudo ./DisReproduce.sh NullP HBASE_21740 v0.8.11
+	sudo ./DisReproduce.sh NullP HBASE_22023 v0.8.11
+	sudo ./DisReproduce.sh NullP HDFS_14216 v0.8.11
+	sudo ./DisReproduce.sh NullP YARN_9164 v0.8.11
+	sudo ./DisReproduce.sh NullP YARN_9193 v0.8.11
+	sudo ./DisReproduce.sh NullP MR_7178 v0.8.11
+	sudo ./DisReproduce.sh InvalidStateTransitionException YARN_8650 v0.8.11
 Maybe need sudo before each command.
 If you need to reprodue another bug after reproduce one bug, you need to `(sudo) ./restart`.
 
-Four bugs are share root cause and same patchs with above bugs, so we don't reproduce them alone.
+We have reported 20 bugs in our paper, 3 of them  share root cause and same patchs with above bugs, so we don't reproduce them alone.
 	
 #### 5. Result
 if you reproduce all bugs one time, the result generates in ./result.txt.
@@ -50,7 +51,7 @@ The result for each bug formated as below
     =======================================================================================
 	
 
-BugLink is the issue  site that we report each bug, it contains the excetpion that will be thrwon when the bug is triggered.
+BugLink is the issue  site that we report each bug, it contains the excetpion that will be thrown when the bug is triggered.
 
 Result will give  which log file and which line that the expected exception exists. You can check the log file for detail(like stack trace).
 
