@@ -1,4 +1,4 @@
-# To deproduce bugs in docker
+# To reproduce bugs in docker
 
 Our experiment implemented on only one VM(our VM:[1 or 4 kernal, 8GB RAM, 50GB Disk]) with three docker instance as distribute node run on it, so **it will take about 10min to reproduce a bug,** a better VM will accelerate the experiment.
 #### 0. Environment
