@@ -81,4 +81,4 @@ In reproducing HBASE_22041, the staup process hangs and prints thounds of logs. 
 ```
 
 ### 6. Failed to Reproduce
-We have reproduced all bugs successfully in our VM. If you can't reproduce one bug, you can try again by restarting it again from scratch. If the bug still fails to reproduce, please create an issue and attatch the runtime logs. 
+We have reproduced all bugs successfully in our VM. If you can't reproduce one bug, you can try again by restarting it from scratch. If the bug still fails to reproduce, please create an issue and attatch the runtime logs. 
