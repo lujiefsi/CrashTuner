@@ -70,6 +70,7 @@ docker exec -it --user test hadoop13 bash -c "sed -i '1s/^/0.0.0.0,/' /home/test
 docker exec -it --user test hadoop11 bash -c "/home/test/program/jdk1.8.0_65/bin/java -jar /home/test/DisReproduce/target/DisReproduce.jar /home/test/DisReproduce $2"
 sleep 5s
 docker cp -a hadoop11:/home/test/DisReproduce/logs/ ./
+chmod -R 755 ./logs
 echo "=====================================Result:=========================================="
 if [ "$2" = "HBASE_22041" -o "$2" = "HBASE_" ];then
         tail ./logs/$2/$1
