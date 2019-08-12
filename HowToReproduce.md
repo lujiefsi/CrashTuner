@@ -38,7 +38,7 @@ We aslo give a timeout threshold(about 30 minutes) to each bug, so if one bug se
 	sudo ./DisReproduce.sh NullP MR_7178 v0.8.11
 	sudo ./DisReproduce.sh InvalidStateTransitionException YARN_8650 v0.8.11
 
-**After reproducing a bug, you need to run the command `sudo ./restart`, to clean up the environment before trying a new bug. **
+**After reproducing a bug, you need to run the command `sudo ./restart`, to clean up the environment before trying a new bug.**
 
 We have reported 20 bugs in our paper. Three bug issues(HDFS-14216, YARN-8650 and YARN-9164) report two bugs. The two bugs in each issue share the same root cause and can be analysed together.
 
