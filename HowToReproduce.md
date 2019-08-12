@@ -2,7 +2,7 @@
 
 Our experiment implemented on only one VM(our VM:[1 or 4 kernal, 8GB RAM, 50GB Disk]) with three docker instance as distribute node run on it, so **it will take about 10min to reproduce a bug,** a better VM will accelerate the experiment.
 #### 0. Environment
-lk**We only tested on an ubuntu 18.04 VM with `sudo` privilege.**
+**We only tested on an ubuntu 18.04 VM with `sudo` privilege.**
 You need to install docker first, see [https://docs.docker.com/install/linux/docker-ce/ubuntu/](https://docs.docker.com/install/linux/docker-ce/ubuntu/ "docker install") or [https://phoenixnap.com/kb/how-to-install-docker-on-ubuntu-18-04](https://phoenixnap.com/kb/how-to-install-docker-on-ubuntu-18-04 "docker install").
 
 
