@@ -37,8 +37,8 @@ Each bugs may take a long time(about 10 mins) to reproduce
 
 **After reproducing a bug, you need to run the command `sudo ./restart`, to clean up the environment before trying a new bug. **
 
-We have reported 20 bugs in our paper, XXX, XXX, XXX share the same root causes and are fixed in the same patch with XXX, XXX, XXX, respectively. So we do need to reproduce the three bugs.
-	
+We have reported 20 bugs in our paper. Three bug issues(HDFS-14216, YARN-8650 and YARN-9164) report two bugs. The two bugs in each issue share the same root cause and can be analysed together.
+
 #### 5. Result
 If you reproduce all bugs one time (run the command `sudo ./reproduce.sh`), the result is logged in ./result.txt.
 If you reproduce one bug one time, the result is printed directly to the console.
@@ -73,7 +73,7 @@ java.lang.NullPointerException
 ```
 
 
-In reproducing HBASE_22041, the staup process hangs and prints thounds of logs. In order to speed up the reproducing process, we only run XXX minutes and give the last five log statements. Its error messages will be like:
+In reproducing HBASE_22041, the staup process hangs and prints thounds of logs. In order to speed up the reproducing process, we only run 6 minutes and give the last five log statements. Its error messages will be like:
 ```
 2019-08-10 08:58:13,485 WARN  [RSProcedureDispatcher-pool4-t29] procedure.RSProcedureDispatcher: request to server hadoop12.hdnetwork,16020,1565427268910 failed due to org.apache.hadoop.hbase.ipc.FailedServerException: Call to hadoop12.hdnetwork/172.16.1.129:16020 failed on local exception: org.apache.hadoop.hbase.ipc.FailedServerException: This server is in the failed servers list: hadoop12.hdnetwork/172.16.1.129:16020, try=1308, retrying...
 2019-08-10 08:58:13,586 WARN  [RSProcedureDispatcher-pool4-t30] procedure.RSProcedureDispatcher: request to server hadoop12.hdnetwork,16020,1565427268910 failed due to org.apache.hadoop.hbase.ipc.FailedServerException: Call to hadoop12.hdnetwork/172.16.1.129:16020 failed on local exception: org.apache.hadoop.hbase.ipc.FailedServerException: This server is in the failed servers list: hadoop12.hdnetwork/172.16.1.129:16020, try=1309, retrying...
