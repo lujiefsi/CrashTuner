@@ -13,8 +13,11 @@ You need to install docker first, see [https://docs.docker.com/install/linux/doc
 #### 2. Pull latest docker from docker hub
 `sudo docker pull lczxxx123/disreproduce:v0.8.11 `
 #### 3. Reproduce all bugs 
-Each bugs may take a long time(about 10 mins) to reproduce
 `sudo ./reproduce.sh`
+
+Each bugs may take a long time(about 10 minutes) to reproduce.
+
+We aslo give a timeout threshold(about 30 minutes) to each bug, so if one bug seems hang, do not kill the reproduce process and just wait.
 #### 4. Reproduce a single bug
 
 	sudo ./DisReproduce.sh NullP YARN_9238 v0.8.11
