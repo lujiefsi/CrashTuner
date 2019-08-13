@@ -17,7 +17,7 @@ You need to install docker first, see [https://docs.docker.com/install/linux/doc
 
 Each bugs may take a long time(about 10 minutes) to reproduce.
 
-Some bugs will make the job hang, don't worry, we give a timeout threshold(about 30 minutes) for each bug, so if one bug seems hang, **do not kill the reproduce process** and just wait.
+Some bugs will make the job hang for long time, don't worry and **do not kill the reproduce process** and just wait.
 #### 4. Reproduce a single bug
 
 	sudo ./DisReproduce.sh NullP YARN_9238 v0.8.11
