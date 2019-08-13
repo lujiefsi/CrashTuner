@@ -1,6 +1,6 @@
 # To reproduce bugs in docker
 
-In our artifacts, to simplify the setup process, we conduct the experiments on one VM (our VM:[1 or 4 kernal, 8GB RAM, 100GB Disk]) with three docker instance as distribute node run on it. So **it will take about 10min to reproduce a bug,**.  The performance can be significantly improved in a real distributed environment.  
+In our artifacts, to simplify the setup process, we conduct the experiments on one VM (our VM:[1 or 4 kernal, 8GB RAM, 100GB Disk]) with three docker instance as distribute node run on it. So **it will take about 10min to reproduce a bug**.  The performance can be significantly improved in a real distributed environment.  
 #### 0. Environment
 **We only tested on an ubuntu 18.04 VM with `sudo` privilege.**
 You need to install docker first, see [https://docs.docker.com/install/linux/docker-ce/ubuntu/](https://docs.docker.com/install/linux/docker-ce/ubuntu/ "docker install") or [https://phoenixnap.com/kb/how-to-install-docker-on-ubuntu-18-04](https://phoenixnap.com/kb/how-to-install-docker-on-ubuntu-18-04 "docker install").
