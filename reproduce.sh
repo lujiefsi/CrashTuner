@@ -10,6 +10,15 @@ version="v0.8.11"
 # echo "" >> ./result.txt
 # ./get_result.sh NullP YARN_9223 >> ./result.txt
 echo "" > ./result.txt
+#HBASE_22041
+echo "Processing bug HBASE_22041"
+./restart.sh >/dev/null 2>&1
+./DisReproduce.sh hbase-test-master-hadoop11.log HBASE_22041 $version 2>&1
+echo "" >> ./result.txt
+echo "=====================================BugLink:==========================================" >> ./result.txt
+echo "https://issues.apache.org/jira/browse/HBASE-22041" >> ./result.txt
+./get_result.sh hbase-test-master-hadoop11.log HBASE_22041 >> ./result.txt
+
 #YARN-9238
 echo "Processing bug YARN-9238"
 ./restart.sh >/dev/null 2>&1
@@ -101,15 +110,6 @@ echo "" >> ./result.txt
 echo "=====================================BugLink:==========================================" >> ./result.txt
 echo "https://issues.apache.org/jira/browse/HBASE_22017" >> ./result.txt
 ./get_result.sh LeaseException HBASE_22017 >> ./result.txt
-
-#HBASE_22041
-echo "Processing bug HBASE_22041"
-./restart.sh >/dev/null 2>&1
-./DisReproduce.sh hbase-test-master-hadoop11.log HBASE_22041 $version 2>&1
-echo "" >> ./result.txt
-echo "=====================================BugLink:==========================================" >> ./result.txt
-echo "https://issues.apache.org/jira/browse/HBASE-22041" >> ./result.txt
-./get_result.sh hbase-test-master-hadoop11.log HBASE_22041 >> ./result.txt
 
 #HBASE_22050
 echo "Processing bug HBASE_22050"
