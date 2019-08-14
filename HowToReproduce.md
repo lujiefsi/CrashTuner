@@ -20,6 +20,7 @@ Each bugs may take a long time(about 10 minutes) to reproduce.
 Some bugs will make the job hang for long time(more than 20 minutes), don't worry and **do not kill the reproduce process**, just wait.
 #### 4. Reproduce a single bug
 
+	sudo ./DisReproduce.sh hbase-test-master-hadoop11.log HBASE_22041 v0.8.11
 	sudo ./DisReproduce.sh NullP YARN_9238 v0.8.11
 	sudo ./DisReproduce.sh InvalidStateTransitionException YARN_9248 v0.8.11
 	sudo ./DisReproduce.sh NullP HDFS_14372 v0.8.11
@@ -28,7 +29,6 @@ Some bugs will make the job hang for long time(more than 20 minutes), don't worr
 	sudo ./DisReproduce.sh NullP YARN_8649 v0.8.11
 	sudo ./DisReproduce.sh InvalidStateTransitionException YARN_9194 v0.8.11
 	sudo ./DisReproduce.sh LeaseException HBASE_22017 v0.8.11
-	sudo ./DisReproduce.sh hbase-test-master-hadoop11.log HBASE_22041 v0.8.11
 	sudo ./DisReproduce.sh NullP HBASE_22050 v0.8.11
 	sudo ./DisReproduce.sh NullP HBASE_21740 v0.8.11
 	sudo ./DisReproduce.sh NullP HBASE_22023 v0.8.11
