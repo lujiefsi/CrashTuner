@@ -1,6 +1,6 @@
 # To reproduce bugs in docker
 
-In our artifacts, to simplify the setup process, we conduct the experiments on one VM (our VM:[1 or 4 kernal, 8GB RAM, 50GB Disk]) with three docker instance as distribute node run on it. So **it will take about 10min to reproduce a bug,**.  The performance can be significantly improved in a real distributed environment.  
+In our artifacts, to simplify the setup process, we conduct the experiments on one VM (our VM:[1 or 4 kernal, 8GB RAM, 100GB Disk]) with three docker instance as distribute node run on it. So **it will take about 10min to reproduce a bug**.  The performance can be significantly improved in a real distributed environment.  
 #### 0. Environment
 **We only tested on an ubuntu 18.04 VM with `sudo` privilege.**
 You need to install docker first, see [https://docs.docker.com/install/linux/docker-ce/ubuntu/](https://docs.docker.com/install/linux/docker-ce/ubuntu/ "docker install") or [https://phoenixnap.com/kb/how-to-install-docker-on-ubuntu-18-04](https://phoenixnap.com/kb/how-to-install-docker-on-ubuntu-18-04 "docker install").
@@ -13,8 +13,11 @@ You need to install docker first, see [https://docs.docker.com/install/linux/doc
 #### 2. Pull latest docker from docker hub
 `sudo docker pull lczxxx123/disreproduce:v0.8.11 `
 #### 3. Reproduce all bugs 
-Each bugs may take a long time(about 10 mins) to reproduce
 `sudo ./reproduce.sh`
+
+Each bugs may take a long time(about 10 minutes) to reproduce.
+
+Some bugs will make the job hang for long time(more than 20 minutes), don't worry and **do not kill the reproduce process**, just wait.
 #### 4. Reproduce a single bug
 
 	sudo ./DisReproduce.sh NullP YARN_9238 v0.8.11
@@ -35,7 +38,7 @@ Each bugs may take a long time(about 10 mins) to reproduce
 	sudo ./DisReproduce.sh NullP MR_7178 v0.8.11
 	sudo ./DisReproduce.sh InvalidStateTransitionException YARN_8650 v0.8.11
 
-**After reproducing a bug, you need to run the command `sudo ./restart`, to clean up the environment before trying a new bug. **
+**After reproducing a bug, you need to run the command `sudo ./restart`, to clean up the environment before trying a new bug.**
 
 We have reported 20 bugs in our paper. Three bug issues(HDFS-14216, YARN-8650 and YARN-9164) report two bugs. The two bugs in each issue share the same root cause and can be analysed together.
 

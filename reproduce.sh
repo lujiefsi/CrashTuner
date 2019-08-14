@@ -25,7 +25,7 @@ echo "Processing bug YARN-9164"
 ./DisReproduce.sh NullP YARN_9164 $version 2>&1
 echo "" >> ./result.txt
 echo "=====================================BugLink:==========================================" >> ./result.txt
-echo "This bug trigger success randomly, due to randomness of allocation of slave container" >> ./result.txt
+#echo "This bug trigger success randomly, due to randomness of allocation of slave container" >> ./result.txt
 echo "https://issues.apache.org/jira/browse/YARN-9164" >> ./result.txt
 ./get_result.sh NullP YARN_9164 >> ./result.txt
 
@@ -62,7 +62,7 @@ echo "Processing bug YARN-9193"
 ./DisReproduce.sh NullP YARN_9193 $version 2>&1
 echo "" >> ./result.txt
 echo "=====================================BugLink:==========================================" >> ./result.txt
-echo "This bug trigger success randomly, due to randomance of allocation of slave container" >> ./result.txt
+#echo "This bug trigger success randomly, due to randomance of allocation of slave container" >> ./result.txt
 echo "https://issues.apache.org/jira/browse/YARN-9193" >> ./result.txt
 ./get_result.sh NullP YARN_9193 >> ./result.txt
 
