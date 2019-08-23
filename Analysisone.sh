@@ -56,7 +56,7 @@ docker exec -it --user test hadoop11 bash -c "sed -i '1s/^/0.0.0.0,/' /home/test
 docker exec -it --user test hadoop12 bash -c "sed -i '1s/^/0.0.0.0,/' /home/test/.ssh/known_hosts"
 docker exec -it --user test hadoop13 bash -c "sed -i '1s/^/0.0.0.0,/' /home/test/.ssh/known_hosts"
 
-docker exec -e export BEHOME=/home/test/CrashTuner -it --user test hadoop11 bash -c "/home/test/CrashTuner/bin/analysisone.sh $1 $2"
+docker exec -e BEHOME=/home/test/CrashTuner -it --user test hadoop11 bash -c "/home/test/CrashTuner/bin/analysisone.sh $1 $2"
 
 docker cp hadoop11:/home/test/CrashTuner/output ./
 
