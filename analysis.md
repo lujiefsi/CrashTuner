@@ -13,9 +13,9 @@ We also upload the analysis script, you need
 
 `git fetch`
 
-`git checkout origin/master -- ./Analysisone.sh`
+`git checkout origin/master -- ./Analysisone.sh && chmod +x ./Analysisone.sh`
 
-`git checkout origin/master -- ./Analysisall.sh`
+`git checkout origin/master -- ./Analysisall.sh && chmod +x ./Analysisall.sh`
 
 
 ## Perform Analysis
