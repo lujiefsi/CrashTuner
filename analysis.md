@@ -65,8 +65,9 @@ find the meta-info type in ZK, now CrashTuner can find three meta-info types for
 
 
 ## Perform trigger
+** Don't be cheated by the term "Analysis" **, actually, this docker include the whole framework of CrashTuner. 
 
-Previous  commnd only perform analysis, in order to run the trgigger, you need change the “false” to “true“， like
+You can change the "false" to "true" to ， like
 
 `sudo ./Analysisall.sh true v0.8.23`
 
@@ -81,9 +82,11 @@ or
 `sudo ./Analysisone.sh zk true v0.8.23`
 
 
+"false" means that we only enable analysis and disable the trigger phase.
+
 But it can be very  time-consuming, we strongly recommend you reproduce each bug with this 
-[document](https://github.com/lujiefsi/CrashTuner/tree/master/HowToReproduce.md), along the analysis for each bug in 
-[detail](https://github.com/lujiefsi/CrashTuner/tree/master/detail). This can save a lot of time to undstand a bug.
+[document](https://github.com/lujiefsi/CrashTuner/tree/master/HowToReproduce.md) along the analysis for each bug in 
+[detail](https://github.com/lujiefsi/CrashTuner/tree/master/detail). This can save a lot of time to undstand a new bug.
 
 ## How it works
 
