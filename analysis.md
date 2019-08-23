@@ -41,7 +41,7 @@ the analysis result exists in ./output.
 
 Results are stored in the files  whose name start wtih taeget system name and suffix name is ".txt".
 
-Take the yarn for example
+Taking the yarn for example
 
 
 1. "./output/yarn_meta-info.txt" stores the meta-info.
@@ -66,7 +66,7 @@ find the meta-info in ZK, now CrashTuner can found three meta-infos for ZK.
 
 ## Perform trigger
 
-Previous  commnd only perform analysis, in order to run the trgigger, you need change the “false” to “true“， like
+Previous  commnd only perform analysis phase, in order to run the trgigger phase, you need change the “false” to “true“， like
 
 `sudo ./Analysisall.sh true v0.8.23`
 
