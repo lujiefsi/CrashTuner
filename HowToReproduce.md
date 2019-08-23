@@ -11,7 +11,7 @@ You need to install docker first, see [https://docs.docker.com/install/linux/doc
 
 **The CrashTuner directory is your working directory.**
 #### 2. Pull latest docker from docker hub
-`sudo docker pull lczxxx123/disreproduce:v0.8.23`
+`sudo docker pull lczxxx123/disreproduce:v0.8.11 `
 #### 3. Reproduce all bugs 
 `sudo ./reproduce.sh`
 
