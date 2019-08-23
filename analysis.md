@@ -85,7 +85,7 @@ or
 "false" means that we only enable analysis and disable the trigger phase.
 
 But it can be very  time-consuming to perform a trigger, once you enable it, just wait for test completes. **We strongly recommend you reproduce each bug with this 
-[document](https://github.com/lujiefsi/CrashTuner/tree/master/HowToReproduce.md) along the analysis for each bug in 
+[document](https://github.com/lujiefsi/CrashTuner/tree/master/HowToReproduce.md)(including the same trigger as CrashTuner) along the analysis for each bug in 
 [detail](https://github.com/lujiefsi/CrashTuner/tree/master/detail)**. This can save a lot of time to understand a new bug.
 
 ## How it works
