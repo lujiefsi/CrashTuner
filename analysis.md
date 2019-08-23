@@ -1,4 +1,4 @@
-# To analysis bugs in docker
+# To analyze bugs in docker
 **The CrashTuner directory is your working directory.**
 
 ## Pull the docker
@@ -13,9 +13,9 @@ We also upload the analysis script, you need
 
 `git fetch`
 
-`git checkout origin/master -- ./Analysisone.sh && chmod +x ./Analysisone.sh`
+`git checkout origin/master -- ./Analysisone.sh`
 
-`git checkout origin/master -- ./Analysisall.sh && chmod +x ./Analysisall.sh`
+`git checkout origin/master -- ./Analysisall.sh`
 
 
 ## Perform Analysis
@@ -44,13 +44,16 @@ Results are stored in the files  whose name start wtih taeget system name and su
 Take the yarn for example
 
 
-yarn_meta-info.txt stores the meta-info.
+1. "./output/yarn_meta-info.txt" stores the meta-info.
 
-yarn_fieldRead.txt stores the pre-read static crash points.
+2. "./output/yarn_fieldRead.txt" stores the pre-read static crash points.
 
-yarn_fieldWrite.txt stroes the post-write static crash points.
+3. "./output/yarn_fieldWrite.txt" stroes the post-write static crash points.
 
-yarn_executed_SP.txt stros the dynamic crash points.
+4. "./output/yarn_executed_SP.txt" stros the dynamic crash points.
+
+
+One meta-info or crash point per line.
 
 
 ### Minor change 
@@ -78,9 +81,9 @@ or
 `sudo ./Analysisone.sh zk true v0.8.23`
 
 
-But it can be very  time-consuming， we strongly recommend you reproduce each with this 
+But it can be very  time-consuming， we strongly recommend you reproduce each bug with this 
 [document](https://github.com/lujiefsi/CrashTuner/tree/master/HowToReproduce.md), along the analysis for each bug in 
-[detail](https://github.com/lujiefsi/CrashTuner/tree/master/detail). This can save a lot of time.
+[detail](https://github.com/lujiefsi/CrashTuner/tree/master/detail). This can save a lot of time to undstand a bug.
 
 ## Tips
 
