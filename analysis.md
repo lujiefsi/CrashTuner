@@ -97,7 +97,7 @@ then `cd /home/test/CrashTuner/bin && ls`, you can see  analysisone.sh. In the s
 
 
 1. "startService.sh" is used to start our rpc server.
-2. "com.ict.main.Driver -target 0"  perfroms tranin and generate the logs whose exists in ./log/training.
+2. "com.ict.main.Driver -target 0"  perfroms train and generates the logs(used for log analysis) that exists in "./log/training".
 3. "startFS.sh" perform the static analysis.
 4. ""com.ict.main.Driver -target 1"  perfroms profile.
 
