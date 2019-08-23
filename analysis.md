@@ -86,7 +86,7 @@ or
 
 But it can be very  time-consuming, we strongly recommend you reproduce each bug with this 
 [document](https://github.com/lujiefsi/CrashTuner/tree/master/HowToReproduce.md) along the analysis for each bug in 
-[detail](https://github.com/lujiefsi/CrashTuner/tree/master/detail). This can save a lot of time to undstand a new bug.
+[detail](https://github.com/lujiefsi/CrashTuner/tree/master/detail). This can save a lot of time to understand a new bug.
 
 ## How it works
 
@@ -103,11 +103,10 @@ then `cd /home/test/CrashTuner/bin && ls`, you can see  analysisone.sh. In the s
 
 you can spilt the script and run the analysis step by step.
 
-All logs exists "./CrashTuner/logs", you can check them while the test is running
+All logs exists "./CrashTuner/logs", you can check them while the test is running.
 
 
 ## Tips
 
 You don't need update the docker if you only want reproduce the bug. And even you update the docker, the  instructions in
 the [document](https://github.com/lujiefsi/CrashTuner/tree/master/HowToReproduce.md) still works.
-
