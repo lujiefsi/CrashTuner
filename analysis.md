@@ -59,7 +59,7 @@ One meta-info or crash point per line.
 ### Minor change 
 
 The result may have minor change compared to our paper, because we have improved our code. For example, our paper say CrashTuner can't
-find the meta-info in ZK, now CrashTuner can found three meta-infos for ZK.
+find the meta-info type in ZK, now CrashTuner can find three meta-info types for ZK.
 
 
 
@@ -98,6 +98,7 @@ then `cd /home/test/CrashTuner/bin && ls`, you can see  analysisone.sh. In the s
 3. "startFS.sh" perform the static analysis.
 4. ""com.ict.main.Driver -target 1"  perfroms profile.
 
+you can spilt the script and run the analysis step by step.
 
 All logs exists "./CrashTuner/logs", you can check them while the test is running
 
