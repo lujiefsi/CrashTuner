@@ -1,7 +1,7 @@
 # To analysis bugs in docker
 **The CrashTuner directory is your working directory.**
 
-## update the docker
+## Pull the docker
 
 We have updated the docker, so you need re-clone the docker by
 
@@ -35,7 +35,31 @@ or run the command to analysis a single target system
 `sudo ./Analysisone.sh zk false v0.8.23`
 
 
-the analysis result exists in ./output
+## Result
+
+the analysis result exists in ./output.
+
+Results are stored in the files  whose name start wtih taeget system name and suffix name is ".txt".
+
+Take the yarn for example
+
+
+yarn_meta-info.txt stores the meta-info.
+
+yarn_fieldRead.txt stores the pre-read static crash points.
+
+yarn_fieldWrite.txt stroes the post-write static crash points.
+
+yarn_executed_SP.txt stros the dynamic crash points.
+
+
+### Minor change 
+
+The result may have minor change compared to our paper, because we have improved our code. For example, our paper say CrashTuner can't
+find the meta-info in ZK, now CrashTuner can found three meta-infos for ZK.
+
+
+
 
 ## Perform trigger
 
@@ -52,3 +76,4 @@ or
 `sudo ./Analysisone.sh hbase true v0.8.23`
 
 `sudo ./Analysisone.sh zk true v0.8.23`
+
