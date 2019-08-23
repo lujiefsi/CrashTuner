@@ -1,4 +1,4 @@
-# To analyze bugs in docker
+# To analysis bugs in docker
 **The CrashTuner directory is your working directory.**
 
 ## Pull the docker
@@ -37,11 +37,11 @@ or run the command to analysis a single target system
 
 ## Result
 
-the analysis result exists in ./output.
+The analysis result exists in ./output.
 
 Results are stored in the files  whose name start wtih taeget system name and suffix name is ".txt".
 
-Taking the yarn for example
+Take the yarn for example
 
 
 1. "./output/yarn_meta-info.txt" stores the meta-info.
@@ -66,7 +66,7 @@ find the meta-info in ZK, now CrashTuner can found three meta-infos for ZK.
 
 ## Perform trigger
 
-Previous  commnd only perform analysis phase, in order to run the trgigger phase, you need change the “false” to “true“， like
+Previous  commnd only perform analysis, in order to run the trgigger, you need change the “false” to “true“， like
 
 `sudo ./Analysisall.sh true v0.8.23`
 
@@ -85,8 +85,24 @@ But it can be very  time-consuming， we strongly recommend you reproduce each b
 [document](https://github.com/lujiefsi/CrashTuner/tree/master/HowToReproduce.md), along the analysis for each bug in 
 [detail](https://github.com/lujiefsi/CrashTuner/tree/master/detail). This can save a lot of time to undstand a bug.
 
+## How it works
+
+There are three phases in analysis: train, static analysis(including log analysis), profile. If you want to know where are they,
+
+you can use commond `sudo docker exec -it --user test hadoop11 /bin/bash` to login hadoop11, 
+then `cd /home/test/CrashTuner/bin && ls`, you can see  analysisone.sh. In the script:
+
+
+1. "startService.sh" is used to start our rpc server.
+2. "com.ict.main.Driver -target 0"  perfroms tranin and generate the logs whose exists in ./log/training.
+3. "startFS.sh" perform the static analysis.
+4. ""com.ict.main.Driver -target 1"  perfroms profile.
+
+
+All logs exists "./CrashTuner/logs", you can check them while the test is running
+
+
 ## Tips
 
 You don't need update the docker if you only want reproduce the bug. And even you update the docker, the  instructions in
 the [document](https://github.com/lujiefsi/CrashTuner/tree/master/HowToReproduce.md) still works.
-
