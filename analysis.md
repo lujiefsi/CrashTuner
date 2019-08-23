@@ -108,5 +108,5 @@ All logs exists "./CrashTuner/logs", you can check them while the test is runnin
 
 ## Tips
 
-You don't need update the docker if you only want reproduce the bug. And even you update the docker, the  instructions in
+You don't need update the docker if you only want to reproduce the  new bugs. And even you update the docker, the instructions in
 the reproducing [document](https://github.com/lujiefsi/CrashTuner/tree/master/HowToReproduce.md) still works.
