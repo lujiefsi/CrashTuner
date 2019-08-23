@@ -35,6 +35,8 @@ or run the command to analysis a single target system
 `sudo ./Analysisone.sh zk false v0.8.23`
 
 
+It will cost about 1 hour to analysis all systems.
+
 ## Result
 
 The analysis result exists in ./output.
