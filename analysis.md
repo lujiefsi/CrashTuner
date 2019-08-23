@@ -77,3 +77,13 @@ or
 
 `sudo ./Analysisone.sh zk true v0.8.23`
 
+
+But it can be very  time-consuming， we strongly recommend you reproduce each with this 
+[document](https://github.com/lujiefsi/CrashTuner/tree/master/HowToReproduce.md), along the analysis for each bug in 
+[detail](https://github.com/lujiefsi/CrashTuner/tree/master/detail). This can save a lot of time.
+
+## Tips
+
+You don't need update the docker if you only want reproduce the bug. And even you update the docker, the  instructions in
+the [document](https://github.com/lujiefsi/CrashTuner/tree/master/HowToReproduce.md) still works.
+
