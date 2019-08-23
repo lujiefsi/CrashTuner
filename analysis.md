@@ -84,7 +84,7 @@ or
 `sudo ./Analysisone.sh zk true v0.8.23`
 
 
-"false" means that we only enable analysis and disable the trigger phase.
+"false" means that we only enable analysis and disable the trigger phase, "true" enable the trigger phase.
 
 But it can be very  time-consuming to perform a trigger, once you enable it, just wait for test completes. **We strongly recommend you reproduce each bug with this 
 [document](https://github.com/lujiefsi/CrashTuner/tree/master/HowToReproduce.md)(including the same trigger as CrashTuner) along the analysis for each bug in 
