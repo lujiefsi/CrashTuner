@@ -65,7 +65,7 @@ find the meta-info type in ZK, now CrashTuner can find three meta-info types for
 
 
 ## Perform trigger
-** Don't be cheated by the term "Analysis" **, actually, this docker include the whole framework of CrashTuner. 
+**Don't be cheated by the term "Analysis"**, actually, this docker include the whole framework of CrashTuner. 
 
 You can change the "false" to "true" to ， like
 
