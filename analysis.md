@@ -1,4 +1,4 @@
-# To analysis bugs in docker
+# To analyse crash points in docker
 **The CrashTuner directory is your working directory.**
 
 ## Pull the docker
@@ -39,9 +39,9 @@ or run the command to analysis a single target system
 
 The analysis result exists in ./output.
 
-Results are stored in the files  whose name start wtih taeget system name and suffix name is ".txt".
+Results are stored in the files  whose name start wtih target system name and suffix name is ".txt".
 
-Take the yarn for example
+Taking the yarn for example
 
 
 1. "./output/yarn_meta-info.txt" stores the meta-info.
@@ -81,7 +81,7 @@ or
 `sudo ./Analysisone.sh zk true v0.8.23`
 
 
-But it can be very  time-consuming， we strongly recommend you reproduce each bug with this 
+But it can be very  time-consuming, we strongly recommend you reproduce each bug with this 
 [document](https://github.com/lujiefsi/CrashTuner/tree/master/HowToReproduce.md), along the analysis for each bug in 
 [detail](https://github.com/lujiefsi/CrashTuner/tree/master/detail). This can save a lot of time to undstand a bug.
 
@@ -106,3 +106,4 @@ All logs exists "./CrashTuner/logs", you can check them while the test is runnin
 
 You don't need update the docker if you only want reproduce the bug. And even you update the docker, the  instructions in
 the [document](https://github.com/lujiefsi/CrashTuner/tree/master/HowToReproduce.md) still works.
+
