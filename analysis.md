@@ -48,9 +48,9 @@ Taking the yarn for example
 
 2. "./output/yarn_fieldRead.txt" stores the pre-read static crash points.
 
-3. "./output/yarn_fieldWrite.txt" stroes the post-write static crash points.
+3. "./output/yarn_fieldWrite.txt" stores the post-write static crash points.
 
-4. "./output/yarn_executed_SP.txt" stros the dynamic crash points.
+4. "./output/yarn_executed_SP.txt" stores the dynamic crash points.
 
 
 One meta-info or crash point per line.
