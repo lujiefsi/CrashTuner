@@ -74,8 +74,8 @@ Example Crash point
 ```
 1. Trigger will first check whether the class is target instrumentation class based on the class name. 
 2. If it is, trigger will get the method  body of "serviceInit" in this class. 
-3. If beforeOrafter==1, trigger will insert our own code at line 296.
-4. Otherwhise, trigger will insert our own code at line 298. 
+3. If beforeOrafter==1, trigger will insert our own code at line 298.
+4. Otherwhise, trigger will insert our own code at line 296. 
 5. Our own code will check whether the calling context equals "AbstractServiceinitResourceManagermain", 
    * if yes, our own code will perform crash injection
     * otherwise, skip it.
