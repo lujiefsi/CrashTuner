@@ -67,6 +67,7 @@ Taking the yarn for example
 One meta-info or crash point per line.
 ### How trigger uses the crash point
 We will take a crash point to explain how trigger perform instrumentation.
+
 Example Crash point
 ```
 [className=org.apache.hadoop.yarn.server.resourcemanager.ResourceManager, methodName=serviceInit, lineNumber=297, context=AbstractServiceinitResourceManagermain, beforeOrAfter=1
