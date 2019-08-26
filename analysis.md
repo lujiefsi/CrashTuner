@@ -54,6 +54,10 @@ Taking the yarn for example
 3. "./output/yarn_fieldWrite.txt" stores the post-write static crash points.
 
 4. "./output/yarn_executed_SP.txt" stores the dynamic crash points.
+   * The format of result is : SuspiciousPoint [className=?, methodName=?, lineNumber=?, calling contex=?, beforeOrAfter=?]
+   * ClassName, methodName and lineNumber give the postion of the crash point in source code.
+   * Calling context is the call stack(depth is 5), we use classsname+methodname to represent one call.
+   * if beforeAfter == 0, it represet the crash point is pre-read. If beforeAfter == 1, it means the crash point is post-write
 
 
 One meta-info or crash point per line.
