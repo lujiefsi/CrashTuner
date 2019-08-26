@@ -17,6 +17,7 @@ We also upload the analysis script, you need
 
 `git checkout origin/master -- ./Analysisall.sh`
 
+`chmod +x ./*.sh`
 
 ## Perform Analysis
 
