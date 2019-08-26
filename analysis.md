@@ -72,7 +72,13 @@ Example Crash point
 ```
 [className=org.apache.hadoop.yarn.server.resourcemanager.ResourceManager, methodName=serviceInit, lineNumber=297, context=AbstractServiceinitResourceManagermain, beforeOrAfter=1
 ```
-Trigger will first check whether the class is target instrumentation class based on the class name. if it is, Trigger will get the method  body of "serviceInit" in this class. If beforeOrafter==1, trigger will insert our own code at line 296, otherwhise, trigger will insert our own code at line 298. Our own code will check whether the calling context equals "AbstractServiceinitResourceManagermain", if yes, our own code will perform crash injection, otherwise, skip it.
+1. Trigger will first check whether the class is target instrumentation class based on the class name. 
+2. If it is, trigger will get the method  body of "serviceInit" in this class. 
+3. If beforeOrafter==1, trigger will insert our own code at line 296.
+4. Otherwhise, trigger will insert our own code at line 298. 
+5. Our own code will check whether the calling context equals "AbstractServiceinitResourceManagermain", 
+   * if yes, our own code will perform crash injection
+    * otherwise, skip it.
 
 ### Minor change 
 
