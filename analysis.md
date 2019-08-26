@@ -51,11 +51,12 @@ Taking the yarn for example
    * each line is a  class name(type). 
 
 2. "./output/yarn_fieldRead.txt" stores the pre-read static crash points.
-    * The format is "ClassName methodName  lineNumber"
+    * The format is "ClassName methodName  lineNumber".
+    * You can use them to locate the crash point postion in source code.
 
 3. "./output/yarn_fieldWrite.txt" stores the post-write static crash points.
    * The format is "ClassName methodName  lineNumber"
-
+   * You can use them to locate the crash point postion in source code.
 4. "./output/yarn_executed_SP.txt" stores the dynamic crash points.
    * The format of result is : SuspiciousPoint [className=?, methodName=?, lineNumber=?, calling contex=?, beforeOrAfter=?]
    * ClassName, methodName and lineNumber give the postion of the crash point in source code.
