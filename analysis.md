@@ -59,7 +59,7 @@ Taking the yarn for example
    * You can use them to locate the crash point postion in source code.
 4. "./output/yarn_executed_SP.txt" stores the dynamic crash points.
    * The format of result is : SuspiciousPoint [className=?, methodName=?, lineNumber=?, calling contex=?, beforeOrAfter=?]
-   * ClassName, methodName and lineNumber give the postion of the crash point in source code.
+   * ClassName, methodName and lineNumber is the postion of the crash point in source code.
    * Calling context is the call stack(depth is 5), we use classsname+methodname to represent one call.
    * if beforeAfter == 0, it represet the crash point is pre-read. If beforeAfter == 1, it means the crash point is post-write
 
@@ -72,7 +72,7 @@ Example Crash point
 ```
 [className=org.apache.hadoop.yarn.server.resourcemanager.ResourceManager, methodName=serviceInit, lineNumber=297, context=AbstractServiceinitResourceManagermain, beforeOrAfter=1
 ```
-Trigger will first check whether the class is target instrumentation class based on the class name, if yes, it will get the method  body of "serviceInit" in this class. If beforeOrafter==1, trigger will insert our own code at line 296, otherwhise, trigger will insert our own code at line 298. Our own code will check whether the calling context equals "AbstractServiceinitResourceManagermain", if yes, our own code will perform crash injection, otherwise, skip it.
+Trigger will first check whether the class is target instrumentation class based on the class name. if it is, Trigger will get the method  body of "serviceInit" in this class. If beforeOrafter==1, trigger will insert our own code at line 296, otherwhise, trigger will insert our own code at line 298. Our own code will check whether the calling context equals "AbstractServiceinitResourceManagermain", if yes, our own code will perform crash injection, otherwise, skip it.
 
 ### Minor change 
 
