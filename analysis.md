@@ -65,7 +65,13 @@ Taking the yarn for example
 
 
 One meta-info or crash point per line.
-
+### How trigger uses the crash point
+We will take a crash point to explain how trigger perform instrumentation.
+Example Crash point
+```
+[className=org.apache.hadoop.yarn.server.resourcemanager.ResourceManager, methodName=serviceInit, lineNumber=297, context=AbstractServiceinitResourceManagermain, beforeOrAfter=1
+```
+Trigger will first check whether the class can instrment based on the class name, if yes, it will get the method  body of "serviceInit" in this class, and insert our own code at line 297.
 
 ### Minor change 
 
