@@ -48,10 +48,13 @@ Taking the yarn for example
 
 
 1. "./output/yarn_meta-info.txt" stores the meta-info.
+   * each line is a  class name(type). 
 
 2. "./output/yarn_fieldRead.txt" stores the pre-read static crash points.
+    * The format is "ClassName methodName  lineNumber"
 
 3. "./output/yarn_fieldWrite.txt" stores the post-write static crash points.
+   * The format is "ClassName methodName  lineNumber"
 
 4. "./output/yarn_executed_SP.txt" stores the dynamic crash points.
    * The format of result is : SuspiciousPoint [className=?, methodName=?, lineNumber=?, calling contex=?, beforeOrAfter=?]
