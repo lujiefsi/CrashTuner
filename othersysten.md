@@ -1,4 +1,4 @@
-# Analsis other system
+# Analsis other system(remain to be improved)
 Currently you can apply CrashTuner on other system like Cassandra, Storm, Flink.
 Taking the Cassandra for example:
 ## Updating the configuration file : butterflyeffect.properties
