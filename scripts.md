@@ -68,7 +68,10 @@ docker exec -it --user test hadoop11 bash -c "sed -i '1s/^/0.0.0.0,/' /home/test
 docker exec -it --user test hadoop12 bash -c "sed -i '1s/^/0.0.0.0,/' /home/test/.ssh/known_hosts"
 docker exec -it --user test hadoop13 bash -c "sed -i '1s/^/0.0.0.0,/' /home/test/.ssh/known_hosts"
 ```
-After these step, you can deploy the distributed system on three docker instance.
+Now you have three 'nodes' that you can deploy the distributed system on them. You can add more nodes by changing the script.
+You can deply the distributed system by two ways :
+1. Copy the distributed software into docker image and commit.
+2. Using  "docker cp" to copy the  distributed software into 'docker node'.
 
 # Start or Sop the distributed system
 Many distributed systems(like zookeeper and cassandra) don't provide the scripts to start all slaves. Hence you can only login every node
