@@ -142,7 +142,7 @@ restart the rpcServer
 >./bin/stopService.sh && ./bin/startService.sh &
 
 
-start to  profile
+start to  profile and trigger
 
 >/home/test/program/jdk1.8.0_65/bin/java -cp ./target/CrashTuner.jar com.ict.main.Driver -confdir ./conf -target 1 -testall true
 
