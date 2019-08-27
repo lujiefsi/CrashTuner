@@ -139,9 +139,10 @@ then start to profile
 
 then start to static analysis
 
->vim scope_ca_3.11.4
+first create new scope file
+>vim conf/scope_ca_3.11.4
 
->add code:
+>add below code:
 
 ```
 Primordial,Java,stdlib,none
