@@ -16,12 +16,23 @@ git checkout origin/master -- ./startDockerForCA.sh
 
 chmod +x ./*.sh
 
+
+##  Changing the classloader and classppath(skip it for cassandra)
+
+You need change the start script of each system to change the classloader and classppath:
+```
+CLASSPATH=/tmp/trigger.jar:$CLASSPATH
+JVM_OPTS="$JVM_OPTS -Djava.system.class.loader=com.ict.instrumention.InstrumentClassLoader"
+```
+*we have change this for cassandra, just skip it*
+
 ## Deploy the distributed system
 
 first you need start the docker instances:
 
 >sudo ./startDockerForCA.sh v0.8.23
 
+startDockerForCA.sh will copy the cassandra cassandra-3.11.4.tar.gz to hadoop11 hadoop12 hadoop13
 may take a long time, just wait.
 
 then login hadoop11
@@ -167,12 +178,4 @@ will take long time and just wait.
 
 when the test finshes, see the result in ./output
 
-##  Changing the classloader and classppath
-
-You need change the start script of each system to change the classloader and classppath:
-```
-CLASSPATH=/tmp/trigger.jar:$CLASSPATH
-JVM_OPTS="$JVM_OPTS -Djava.system.class.loader=com.ict.instrumention.InstrumentClassLoader"
-```
-*we have change this for cassandra, just skip it for cassandra*
 ## You may meet the some problem while applying CrashTuner on other system, just leave a issue along with your configution.
