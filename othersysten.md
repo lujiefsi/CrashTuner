@@ -23,10 +23,11 @@ workload = stress
 ```
 ## 
 You need change the start script of Cassandra to change the classloader and classppath:
-'''
+
+```
 CLASSPATH=/tmp/trigger.jar:$CLASSPATH
 JVM_OPTS="$JVM_OPTS -Djava.system.class.loader=com.ict.instrumention.InstrumentClassLoader"
-'''
+```
 
 ## Deploy the Cassandra.
 system_home gives where the cassandra should exist.
