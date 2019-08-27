@@ -89,9 +89,8 @@ then back to hadoop11
 
 >cd ~/CrashTuner/
 
->vim ./conf/butterflyeffect.properties
 ## start to analysis
-First you need repalce the content of butterflyeffect.properties by below code:
+First you need repalce the content of conf/butterflyeffect.properties by below code:
 ```
 system = CASSANDRA
 version = 3.11.4
