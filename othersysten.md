@@ -126,11 +126,11 @@ then start to static analysis
 
 >add code:
 
-'''
+```
 Primordial,Java,stdlib,none
 Primordial,Java,jarFile,primordial.jar.model
 Application,Java,jarFile,/home/test/CrashTuner/jars/cassandra/apache-cassandra-3.11.4.jar
-'''
+```
 
 >./bin/startFS.sh
 
