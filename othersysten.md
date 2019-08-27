@@ -140,20 +140,19 @@ restart the rpcServer
 
 >./bin/stopService.sh && ./bin/startService.sh &
 
-see the result in ./output
 
 start to  profile
 
->/home/test/program/jdk1.8.0_65/bin/java -cp ./target/CrashTuner.jar com.ict.main.Driver -confdir ./conf -target 1 -testall false
+>/home/test/program/jdk1.8.0_65/bin/java -cp ./target/CrashTuner.jar com.ict.main.Driver -confdir ./conf -target 1 -testall true
+
+see the result in ./output
 
 ##  Changing the classloader and classppath
 
-*we have change this for cassandra, just skip it for cassandra*
-
-You need change the start script of Cassandra to change the classloader and classppath:
+You need change the start script of each system to change the classloader and classppath:
 ```
 CLASSPATH=/tmp/trigger.jar:$CLASSPATH
 JVM_OPTS="$JVM_OPTS -Djava.system.class.loader=com.ict.instrumention.InstrumentClassLoader"
 ```
-
+*we have change this for cassandra, just skip it for cassandra*
 ## You may meet the some problem while applying CrashTuner on other system, just leave a issue along with your configution.
