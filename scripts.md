@@ -1,4 +1,4 @@
-We provide some very very useful shell scripts to simplify the deployment of distrbiteud system.
+Building the distributed environment and deploying the distributed system are annoying, so we e provide some very very useful shell scripts to simplify the deployment of distrbiteud system.
 
 # Real distributed mode in on machine
 
