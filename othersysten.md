@@ -12,7 +12,7 @@ then login hadoop11
 
 >sudo docker exec -it --user test hadoop11 /bin/bash
 
->change to root(su - root), password is 123456
+change to root(su - root), password is 123456
 
 >yum install lsof
 
@@ -35,7 +35,7 @@ then login hadoop12
 
 >ssh hadoop12
 
->change to root(su - root), password is 123456
+change to root(su - root), password is 123456
 
 >yum install lsof
 
@@ -62,7 +62,7 @@ then login hadoop13
 
 >ssh hadoop13
 
->change to root(su - root), password is 123456
+change to root(su - root), password is 123456
 
 >yum install lsof
 
