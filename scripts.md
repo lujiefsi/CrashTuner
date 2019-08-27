@@ -1,6 +1,6 @@
 Building the distributed environment and deploying the distributed system are annoying, so we provide some very very useful shell scripts to simplify the deployment of distrbiteud system.
 
-# Real distributed mode in on machine
+# Real distributed mode in one machine
 
 Most users only have one machine, formerly, we only can  deploy the *pseudo distributed system* in
 [sigle node](https://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-common/SingleCluster.html).
