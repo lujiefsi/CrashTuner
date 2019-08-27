@@ -15,7 +15,7 @@ We provide three things here:
 1. We list all old bugs(include the bugs in k8s) and new bugs, we give the detail of each bug. 
 2. we provide the artifact of CrashTuner, see [document](https://github.com/lujiefsi/CrashTuner/tree/master/HowToReproduce.md) and 
 [document](https://github.com/lujiefsi/CrashTuner/tree/master/HowToReproduce.md). We give the detail of how to trigger each bug.
-3. We give the scripts that can simplify the deployment of distrbiteud system(Spending lots of time to build this).
+3. We give the (scripts)[https://github.com/lujiefsi/CrashTuner/blob/master/scripts.md] that can simplify the deployment of distrbiteud system(Spending lots of time to build this).
 ## Old Bugs
 
 All our studied bugs and their detail exists in [old bugs](https://github.com/lujiefsi/CrashTuner/tree/master/detail/old%20bugs)， we also give the detail of our study about k8s, but is written in Chinese.  
