@@ -2,6 +2,19 @@
 Currently you can apply CrashTuner on other system like Cassandra, Storm, Flink.
 Taking the Cassandra for example, we will give how we test a system step by step:
 
+
+## update the repo
+
+git fetch
+
+git checkout origin/master -- ./cassandra-3.11.4.tar.gz
+
+git checkout origin/master -- ./apache-cassandra-3.11.4.jar
+
+git checkout origin/master -- ./startDockerForCA.sh
+
+chmod +x ./*.sh
+
 ## Deploy the distributed system
 
 first you need start the docker instances:
