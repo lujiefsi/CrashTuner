@@ -19,7 +19,7 @@ docker run -itd --name hadoop12 --network hdnetwork --ip 172.16.1.129 --hostname
 docker run -itd --name hadoop13 --network hdnetwork --ip 172.16.1.130 --hostname hadoop13  lczxxx123/disreproduce:$3 /bin/bash
 ```
 
-then the script configure the passphraseless,
+then the script configures the passphraseless,
 ```
 docker exec -it --user test hadoop11 bash -c "ssh-keygen -t rsa -N \"\" -f \"/home/test/.ssh/id_rsa\""
 docker exec -it --user test hadoop12 bash -c "ssh-keygen -t rsa -N \"\" -f \"/home/test/.ssh/id_rsa\""
