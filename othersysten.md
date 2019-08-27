@@ -163,7 +163,9 @@ start to  profile and trigger
 
 >/home/test/program/jdk1.8.0_65/bin/java -cp ./target/CrashTuner.jar com.ict.main.Driver -confdir ./conf -target 1 -testall true
 
-see the result in ./output
+will take long time and just wait.
+
+when the test finsh, see the result in ./output
 
 ##  Changing the classloader and classppath
 
