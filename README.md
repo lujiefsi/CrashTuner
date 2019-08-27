@@ -11,9 +11,11 @@ CrashTuner is fault injection framework for distributed system.
 
 
 ## What can you get from this project?
-
-This the report of bugs that found by CrashTuner. We will give the detail of how to trigger each bug. Besides, we also give a simple version of CrashTuner in docker to show how CrashTuner find these bugs.
-
+We provide three things here:
+1. We list all old bugs(include the bugs in k8s) and new bugs, we give the detail of each bug. 
+2. we provide the artifact of CrashTuner, see [document](https://github.com/lujiefsi/CrashTuner/tree/master/HowToReproduce.md) and 
+[document](https://github.com/lujiefsi/CrashTuner/tree/master/HowToReproduce.md). We give the detail of how to trigger each bug.
+3. We give the scripts that can simplify the deployment of distrbiteud system(Spending lots of time to build this).
 ## Old Bugs
 
 All our studied bugs and their detail exists in [old bugs](https://github.com/lujiefsi/CrashTuner/tree/master/detail/old%20bugs)， we also give the detail of our study about k8s, but is written in Chinese.  
