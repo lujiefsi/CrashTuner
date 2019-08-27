@@ -13,7 +13,9 @@ then login hadoop11
 >sudo docker exec -it --user test hadoop11 /bin/bash
 
 >change to root(su - root), password is 123456
+
 >yum install lsof
+
 >su - test
 
 >cd /home/test/DisReproduce/cassandra
