@@ -42,7 +42,7 @@ workload = stress
 
 'workload' give the workload dirvering the target system.
 
-## 
+## Changing the classloader and classppath
 You need change the start script of Cassandra to change the classloader and classppath:
 
 ```
