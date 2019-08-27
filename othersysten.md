@@ -165,7 +165,7 @@ start to  profile and trigger
 
 will take long time and just wait.
 
-when the test finsh, see the result in ./output
+when the test finshes, see the result in ./output
 
 ##  Changing the classloader and classppath
 
