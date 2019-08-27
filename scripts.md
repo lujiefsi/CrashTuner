@@ -6,8 +6,9 @@ Most users only have one machine, formerly, we only can  deploy the *pseudo dist
 [sigle node](https://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-common/SingleCluster.html).
 
 One way to build  the *real* distributed system is to fork two or more VMs, which can can easily slow down the host machine, and it is hard for us to start or stop the VMs automatically. 
+
 Instead we provide the [script](https://github.com/lujiefsi/CrashTuner/blob/master/Analysisone.sh) and docker image to 
-build three docker instances in one machine(or VM) automatically. In the shell, we first build virtual  LAN, 
+build three docker instances in one machine(or VM) automatically. In the script, we first build virtual  LAN, 
 ```
 docker network create -d bridge --subnet=172.16.0.0/16   --gateway=172.16.0.1   --ip-range=172.16.1.0/24 hdnetwork
 ```
