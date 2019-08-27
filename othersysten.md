@@ -101,9 +101,8 @@ change to root(su - root), password is 123456
 >change the 'seeds' to "172.16.1.128,172.16.1.129,172.16.1.130"
 
 then back to hadoop11
->exit
 
->exit
+>ssh hadoop11
 
 >cd ~/CrashTuner/
 
