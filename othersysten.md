@@ -88,7 +88,7 @@ change to root(su - root), password is 123456
 
 >tar -zxvf cassandra-3.11.4.tar.gz
 
-cd ./cassandra-3.11.4
+>cd ./cassandra-3.11.4
 
 >vim ./conf/logback.xml
 
