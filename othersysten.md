@@ -139,7 +139,7 @@ then start to profile
 
 then start to static analysis
 
->vim scope_ca_3.2.0
+>vim scope_ca_3.11.4
 
 >add code:
 
