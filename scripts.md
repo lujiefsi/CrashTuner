@@ -5,7 +5,7 @@ We provide some very very useful shell scripts to simplify the deployment of dis
 Most users only have one machine, formerly, we only can  deploy the *pseudo distributed system* in
 [sigle node](https://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-common/SingleCluster.html).
 
-One way to build  the *real* distributed system is to fork two or more VMs, which can can easily slow down the host machine. 
+One way to build  the *real* distributed system is to fork two or more VMs, which can can easily slow down the host machine, and it is hard for us to start or stop the VMs automatically. 
 Instead we provide the [script](https://github.com/lujiefsi/CrashTuner/blob/master/Analysisone.sh) and docker image to 
 build three docker instances in one machine(or VM) automatically. In the shell, we first build virtual  LAN, 
 ```
