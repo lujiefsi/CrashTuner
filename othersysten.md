@@ -90,8 +90,8 @@ then back to hadoop11
 >cd ~/CrashTuner/
 
 >vim ./conf/butterflyeffect.properties
-
-then repalce the content of butterflyeffect.properties by below code:
+## start to analysis
+First you need repalce the content of butterflyeffect.properties by below code:
 ```
 system = CASSANDRA
 version = 3.11.4
@@ -122,6 +122,7 @@ then start to profile
 >/home/test/program/jdk1.8.0_65/bin/java -cp ./target/CrashTuner.jar com.ict.main.Driver -confdir ./conf -target 0 -testall false
 
 then start to static analysis
+
 >vim scope_ca_3.2.0
 
 >add code:
