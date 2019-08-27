@@ -71,10 +71,15 @@ change to root(su - root), password is 123456
 >cd /home/test/DisReproduce/cassandra
 
 >tar -zxvf cassandra-3.11.4.tar.gz
+
 >vim ./conf/logback.xml
+
 >change all "hadoop11" to hadoop13( %s/hadoop11/hadoop13/g )
+
 >vim conf/cassandra.yaml
+
 >change the 'listen_address' to 172.16.1.130
+
 >change the 'seeds' to 172.16.1.128,172.16.1.129,172.16.1.130
 
 then back to hadoop11
