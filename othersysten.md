@@ -52,3 +52,5 @@ JVM_OPTS="$JVM_OPTS -Djava.system.class.loader=com.ict.instrumention.InstrumentC
 
 ## Deploy the Cassandra.
 system_home gives where the cassandra should exist.
+
+## you may meet the some problem while apply CrashTuner on other system, just leave a issue along with your configution.
