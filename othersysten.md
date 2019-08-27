@@ -65,7 +65,7 @@ change to root(su - root), password is 123456
 
 >vim ./conf/logback.xml
 
->change all "hadoop11" to hadoop12( %s/hadoop11/hadoop12/g )
+>change all "hadoop11" to hadoop12(you can use vim commond: %s/hadoop11/hadoop12/g )
 
 >vim conf/cassandra.yaml
 
