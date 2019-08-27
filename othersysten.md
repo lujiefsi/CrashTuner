@@ -21,6 +21,8 @@ first you need start the docker instances:
 
 >sudo ./startDockerForCA.sh v0.8.23
 
+may take a long time, just wait.
+
 then login hadoop11
 
 >sudo docker exec -it --user test hadoop11 /bin/bash
